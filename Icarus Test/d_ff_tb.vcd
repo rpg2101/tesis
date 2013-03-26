@@ -1,0 +1,40 @@
+$date
+	Tue Mar 26 00:52:26 2013
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module d_ff_tb $end
+$var wire 1 ! q $end
+$var wire 1 " q_bar $end
+$var reg 1 # clock $end
+$var reg 1 $ d $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1$
+0#
+x"
+x!
+$end
+#5
+0"
+1!
+1#
+#10
+0#
+0$
+#15
+1"
+0!
+1#
+#20
+0#
+#25
+1#
+#30
+0#
