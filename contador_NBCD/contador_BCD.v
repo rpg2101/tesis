@@ -18,16 +18,36 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
+
+
+
 module contador_BCD
 #(parameter N=3)
 (
     input clk,
     input rst,
 	 input clk_en,
-    output wire [N*4-1:0] sal
-    );
+	 input [log2(N)-1:0] sel,
+    output wire [N*4-1:0] sal,
+	 output [3:0] sal_aux
+);
+
+
+function automatic integer log2;
+   input integer arg;
+	begin
+     log2= 0;
+     while(arg>1)
+       begin
+          arg=arg/2;
+          log2=log2+1;
+       end
+  end
+  endfunction
+
 	  
 	wire [N-1:0] interna;
+	wire [3:0] salidas [N-1:0];
 	
 	generate
 	genvar i;
@@ -38,13 +58,15 @@ module contador_BCD
 	
 		always @(posedge clk)
 		begin
+		   
 			if (aux2)  
 				cont <= 0;
 			else
 			begin 
 				if (clk_en_int)
-					cont <= cont + 1 ;
+						cont <= cont + 1 ;
 			end
+			
 		end //always	
 		
 		assign sal[(i+1)*4-1:i*4] = cont;
@@ -52,6 +74,7 @@ module contador_BCD
 		assign aux1 = cmp & clk_en_int ;
 		assign aux2 = aux1 | rst;
 		assign interna [i] = cmp;
+		assign salidas [i] = sal[(i+1)*4-1:i*4];
 		
 		if (i!=0) 
 		begin : primerelem
@@ -61,7 +84,10 @@ module contador_BCD
 		else begin
 			assign clk_en_int = clk_en ;
 		end 
-		end //for
-	endgenerate
-	endmodule
+	end //for
+	endgenerate 
+	
+	assign sal_aux = salidas[sel];
+	
+endmodule
 

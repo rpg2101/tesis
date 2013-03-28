@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: contador_BCD.prj
 
@@ -68,7 +68,7 @@ Automatic Register Balancing       : No
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 500
+Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 24
 Register Duplication               : YES
 Slice Packing                      : YES
@@ -122,6 +122,7 @@ Analyzing hierarchy for module <contador_BCD> in library <work> with parameters.
 =========================================================================
 Analyzing top module <contador_BCD>.
 	N = 32'sb00000000000000000000000000000011
+INFO:Xst:1607 - Contents of array <salidas> may be accessed with an index that does not cover the full array size.
 Module <contador_BCD> is correct for synthesis.
  
 
@@ -133,12 +134,15 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <contador_BCD>.
     Related source file is "contador_BCD.v".
+WARNING:Xst:1780 - Signal <iteracioncont[0].res> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <interna<2>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 4-bit 3-to-1 multiplexer for signal <sal_aux>.
     Found 4-bit up counter for signal <iteracioncont[0].cont>.
     Found 4-bit up counter for signal <iteracioncont[1].cont>.
     Found 4-bit up counter for signal <iteracioncont[2].cont>.
     Summary:
 	inferred   3 Counter(s).
+	inferred   4 Multiplexer(s).
 Unit <contador_BCD> synthesized.
 
 
@@ -148,6 +152,8 @@ HDL Synthesis Report
 Macro Statistics
 # Counters                                             : 3
  4-bit up counter                                      : 3
+# Multiplexers                                         : 1
+ 4-bit 3-to-1 multiplexer                              : 1
 
 =========================================================================
 
@@ -162,6 +168,8 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Counters                                             : 3
  4-bit up counter                                      : 3
+# Multiplexers                                         : 1
+ 4-bit 3-to-1 multiplexer                              : 1
 
 =========================================================================
 
@@ -208,23 +216,24 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 15
+# IOs                              : 20
 
 Cell Usage :
-# BELS                             : 22
+# BELS                             : 27
 #      INV                         : 3
 #      LUT2                        : 3
-#      LUT2_L                      : 2
-#      LUT3                        : 3
-#      LUT3_L                      : 3
-#      LUT4                        : 8
+#      LUT2_L                      : 1
+#      LUT3                        : 9
+#      LUT3_L                      : 1
+#      LUT4                        : 9
+#      LUT4_L                      : 1
 # FlipFlops/Latches                : 12
 #      FDRE                        : 12
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 14
-#      IBUF                        : 2
-#      OBUF                        : 12
+# IO Buffers                       : 19
+#      IBUF                        : 3
+#      OBUF                        : 16
 =========================================================================
 
 Device utilization summary:
@@ -232,11 +241,11 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-5 
 
- Number of Slices:                       12  out of    960     1%  
+ Number of Slices:                       13  out of    960     1%  
  Number of Slice Flip Flops:             12  out of   1920     0%  
- Number of 4 input LUTs:                 22  out of   1920     1%  
- Number of IOs:                          15
- Number of bonded IOBs:                  15  out of     83    18%  
+ Number of 4 input LUTs:                 27  out of   1920     1%  
+ Number of IOs:                          20
+ Number of bonded IOBs:                  20  out of     83    24%  
  Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
@@ -271,10 +280,10 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 3.767ns (Maximum Frequency: 265.481MHz)
-   Minimum input arrival time before clock: 4.576ns
-   Maximum output required time after clock: 4.285ns
-   Maximum combinational path delay: No path found
+   Minimum period: 5.325ns (Maximum Frequency: 187.804MHz)
+   Minimum input arrival time before clock: 5.932ns
+   Maximum output required time after clock: 5.471ns
+   Maximum combinational path delay: 5.895ns
 
 Timing Detail:
 --------------
@@ -282,32 +291,33 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 3.767ns (frequency: 265.481MHz)
-  Total number of paths / destination ports: 110 / 32
+  Clock period: 5.325ns (frequency: 187.804MHz)
+  Total number of paths / destination ports: 174 / 32
 -------------------------------------------------------------------------
-Delay:               3.767ns (Levels of Logic = 2)
-  Source:            iteracioncont[1].cont_0 (FF)
-  Destination:       iteracioncont[1].cont_0 (FF)
+Delay:               5.325ns (Levels of Logic = 3)
+  Source:            iteracioncont[0].cont_0 (FF)
+  Destination:       iteracioncont[2].cont_0 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: iteracioncont[1].cont_0 to iteracioncont[1].cont_0
+  Data Path: iteracioncont[0].cont_0 to iteracioncont[2].cont_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             7   0.514   0.632  iteracioncont[1].cont_0 (iteracioncont[1].cont_0)
-     LUT3_L:I2->LO         1   0.612   0.103  iteracioncont[1]_aux21_SW0 (N10)
-     LUT4:I3->O            4   0.612   0.499  iteracioncont[1]_aux21 (iteracioncont[1]_aux2)
-     FDRE:R                    0.795          iteracioncont[1].cont_0
+     FDRE:C->Q            10   0.514   0.780  iteracioncont[0].cont_0 (iteracioncont[0].cont_0)
+     LUT3:I2->O            1   0.612   0.360  iteracioncont[2]_clk_en_int_SW1 (N12)
+     LUT4:I3->O            5   0.612   0.541  iteracioncont[2]_clk_en_int (iteracioncont[2]_clk_en_int)
+     LUT4:I3->O            4   0.612   0.499  iteracioncont[2]_aux2 (iteracioncont[2]_aux2)
+     FDRE:R                    0.795          iteracioncont[2].cont_0
     ----------------------------------------
-    Total                      3.767ns (2.533ns logic, 1.234ns route)
-                                       (67.2% logic, 32.8% route)
+    Total                      5.325ns (3.145ns logic, 2.180ns route)
+                                       (59.1% logic, 40.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
   Total number of paths / destination ports: 36 / 24
 -------------------------------------------------------------------------
-Offset:              4.576ns (Levels of Logic = 3)
+Offset:              5.932ns (Levels of Logic = 4)
   Source:            clk_en (PAD)
   Destination:       iteracioncont[2].cont_0 (FF)
   Destination Clock: clk rising
@@ -316,44 +326,65 @@ Offset:              4.576ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             9   1.106   0.849  clk_en_IBUF (clk_en_IBUF)
-     LUT3_L:I0->LO         1   0.612   0.103  iteracioncont[2]_aux2_SW0 (N01)
+     IBUF:I->O             8   1.106   0.795  clk_en_IBUF (clk_en_IBUF)
+     LUT3:I0->O            1   0.612   0.360  iteracioncont[2]_clk_en_int_SW1 (N12)
+     LUT4:I3->O            5   0.612   0.541  iteracioncont[2]_clk_en_int (iteracioncont[2]_clk_en_int)
      LUT4:I3->O            4   0.612   0.499  iteracioncont[2]_aux2 (iteracioncont[2]_aux2)
      FDRE:R                    0.795          iteracioncont[2].cont_0
     ----------------------------------------
-    Total                      4.576ns (3.125ns logic, 1.451ns route)
-                                       (68.3% logic, 31.7% route)
+    Total                      5.932ns (3.737ns logic, 2.195ns route)
+                                       (63.0% logic, 37.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 12 / 12
+  Total number of paths / destination ports: 20 / 16
 -------------------------------------------------------------------------
-Offset:              4.285ns (Levels of Logic = 1)
-  Source:            iteracioncont[1].cont_0 (FF)
-  Destination:       sal<4> (PAD)
+Offset:              5.471ns (Levels of Logic = 2)
+  Source:            iteracioncont[0].cont_0 (FF)
+  Destination:       sal_aux<0> (PAD)
   Source Clock:      clk rising
 
-  Data Path: iteracioncont[1].cont_0 to sal<4>
+  Data Path: iteracioncont[0].cont_0 to sal_aux<0>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             7   0.514   0.602  iteracioncont[1].cont_0 (iteracioncont[1].cont_0)
-     OBUF:I->O                 3.169          sal_4_OBUF (sal<4>)
+     FDRE:C->Q            10   0.514   0.819  iteracioncont[0].cont_0 (iteracioncont[0].cont_0)
+     LUT3:I1->O            1   0.612   0.357  Mmux_sal_aux11 (sal_aux_0_OBUF)
+     OBUF:I->O                 3.169          sal_aux_0_OBUF (sal_aux<0>)
     ----------------------------------------
-    Total                      4.285ns (3.683ns logic, 0.602ns route)
-                                       (86.0% logic, 14.0% route)
+    Total                      5.471ns (4.295ns logic, 1.176ns route)
+                                       (78.5% logic, 21.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Delay:               5.895ns (Levels of Logic = 3)
+  Source:            sel<0> (PAD)
+  Destination:       sal_aux<3> (PAD)
+
+  Data Path: sel<0> to sal_aux<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.106   0.651  sel_0_IBUF (sel_0_IBUF)
+     LUT3:I0->O            1   0.612   0.357  Mmux_sal_aux41 (sal_aux_3_OBUF)
+     OBUF:I->O                 3.169          sal_aux_3_OBUF (sal_aux<3>)
+    ----------------------------------------
+    Total                      5.895ns (4.887ns logic, 1.008ns route)
+                                       (82.9% logic, 17.1% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.57 secs
+Total CPU time to Xst completion: 4.91 secs
  
 --> 
 
-Total memory usage is 151756 kilobytes
+Total memory usage is 152780 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    1 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 

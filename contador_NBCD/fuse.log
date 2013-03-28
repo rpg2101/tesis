@@ -1,20 +1,21 @@
-Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Documents and Settings/Administrador/Escritorio/contador_NBCD/test_isim_beh.exe" -prj "C:/Documents and Settings/Administrador/Escritorio/contador_NBCD/test_beh.prj" "work.test" "work.glbl" 
+Running: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o Z:/contador_NBCD/test_isim_beh.exe -prj Z:/contador_NBCD/test_beh.prj work.test work.glbl 
 ISim P.28xd (signature 0x1048c146)
 Number of CPUs detected in this system: 1
 Turning on mult-threading, number of parallel sub-compilation jobs: 0 
 Determining compilation order of HDL files
-Analyzing Verilog file "C:/Documents and Settings/Administrador/Escritorio/contador_NBCD/contador_BCD.v" into library work
-Analyzing Verilog file "C:/Documents and Settings/Administrador/Escritorio/contador_NBCD/test.v" into library work
+Analyzing Verilog file "Z:/contador_NBCD/contador_BCD.v" into library work
+Analyzing Verilog file "Z:/contador_NBCD/test.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
+WARNING:HDLCompiler:189 - "Z:/contador_NBCD/test.v" Line 42: Size mismatch in connection of port <sel>. Formal port size is 1-bit while actual signal size is 4-bit.
 Completed static elaboration
 Fuse Memory Usage: 66920 KB
-Fuse CPU Usage: 220 ms
+Fuse CPU Usage: 290 ms
 Compiling module contador_BCD_default
 Compiling module test
 Compiling module glbl
 Time Resolution for simulation is 1ps.
 Compiled 3 Verilog Units
-Built simulation executable C:/Documents and Settings/Administrador/Escritorio/contador_NBCD/test_isim_beh.exe
+Built simulation executable Z:/contador_NBCD/test_isim_beh.exe
 Fuse Memory Usage: 71404 KB
-Fuse CPU Usage: 230 ms
+Fuse CPU Usage: 300 ms
