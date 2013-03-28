@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "C:/Documents and Settings/Administrador/Escritorio/contador_NBCD/contador_BCD.xst" -ofn "C:/Documents and Settings/Administrador/Escritorio/contador_NBCD/contador_BCD.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/Administrador/Escritorio/contador_NBCD/contador_BCD.xst" -ofn "C:/Documents and Settings/Administrador/Escritorio/contador_NBCD/contador_BCD.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 "contador_BCD.ngc" contador_BCD.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o contador_BCD_map.ncd contador_BCD.ngd contador_BCD.pcf 
+par -w -intstyle ise -ol high -t 1 contador_BCD_map.ncd contador_BCD.ncd contador_BCD.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml contador_BCD.twx contador_BCD.ncd -o contador_BCD.twr contador_BCD.pcf 
