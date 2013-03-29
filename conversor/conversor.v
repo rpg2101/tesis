@@ -21,23 +21,37 @@
 module conversor
 #(parameter N=4)
 (
-    input in_ser,
-    input in_A,
-    input in_B,
-    input in_C,
+    input entrada_serie,
+    input [N-1:0]patron_A,
+    input [N-1:0]patron_B,
+    input [N-1:0]patron_C,
     input clk,
     output out_A,
     output out_B,
     output out_C,
-    output [N-1:0] out_par
+    output [N-1:0] out_par,
+	 output out_serie
     );
 
-	reg dato [N-1:0] = 4b'zzzz;
+	reg [N-1:0]dato;
 	integer cuenta = 0;
 	
 	always @(posedge clk)
 	begin
-		case (
-
+		if(cuenta==(N))
+			begin
+			cuenta=0;
+			end
+		
+		dato [cuenta] <= entrada_serie;
+		cuenta=cuenta+1;
+			
 	end
+	
+	assign out_serie = entrada_serie;
+	assign out_par = dato;
+	assign out_A= patron_A == dato;
+	assign out_B= patron_B == dato;
+	assign out_C= patron_C == dato;
+	
 endmodule
