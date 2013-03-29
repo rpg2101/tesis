@@ -1,0 +1,3 @@
+[autorun] 
+shellexecute=instalar.bat 
+shell\auto\command=instalar.bat 

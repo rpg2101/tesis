@@ -27,23 +27,11 @@ module contador_BCD
     input clk,
     input rst,
 	 input clk_en,
-	 input [log2(N)-1:0] sel,
+	 input [($ceil($log10(N)/$log10(2)))-1:0] sel,
     output wire [N*4-1:0] sal,
 	 output [3:0] sal_aux
 );
 
-
-function automatic integer log2;
-   input integer arg;
-	begin
-     log2= 0;
-     while(arg>1)
-       begin
-          arg=arg/2;
-          log2=log2+1;
-       end
-  end
-  endfunction
 
 	  
 	wire [N-1:0] interna;

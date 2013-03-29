@@ -74,3 +74,5 @@ xst -intstyle ise -ifn "Z:/contador_NBCD/contador_BCD.xst" -ofn "Z:/contador_NBC
 xst -intstyle ise -ifn "Z:/contador_NBCD/contador_BCD.xst" -ofn "Z:/contador_NBCD/contador_BCD.syr" 
 xst -intstyle ise -ifn "Z:/contador_NBCD/contador_BCD.xst" -ofn "Z:/contador_NBCD/contador_BCD.syr" 
 xst -intstyle ise -ifn "Z:/contador_NBCD/contador_BCD.xst" -ofn "Z:/contador_NBCD/contador_BCD.syr" 
+xst -intstyle ise -ifn "Z:/contador_NBCD/contador_BCD.xst" -ofn "Z:/contador_NBCD/contador_BCD.syr" 
+xst -intstyle ise -ifn "Z:/contador_NBCD/contador_BCD.xst" -ofn "Z:/contador_NBCD/contador_BCD.syr" 
