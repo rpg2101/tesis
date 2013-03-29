@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Documents and Settings/Administrador/Escritorio/conversor/conversor_isim_beh.exe" -prj "C:/Documents and Settings/Administrador/Escritorio/conversor/conversor_beh.prj" "work.conversor" "work.glbl" 

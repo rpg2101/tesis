@@ -1,0 +1,10 @@
+Running: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Documents and Settings/Administrador/Escritorio/conversor/conversor_isim_beh.exe -prj C:/Documents and Settings/Administrador/Escritorio/conversor/conversor_beh.prj work.conversor work.glbl 
+ISim P.28xd (signature 0x1048c146)
+Number of CPUs detected in this system: 1
+Turning on mult-threading, number of parallel sub-compilation jobs: 0 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Documents and Settings/Administrador/Escritorio/conversor/conversor.v" into library work
+ERROR:HDLCompiler:806 - "C:/Documents and Settings/Administrador/Escritorio/conversor/conversor.v" Line 35: Syntax error near "b".
+ERROR:HDLCompiler:806 - "C:/Documents and Settings/Administrador/Escritorio/conversor/conversor.v" Line 42: Syntax error near "end".
+ERROR:HDLCompiler:598 - "C:/Documents and Settings/Administrador/Escritorio/conversor/conversor.v" Line 21: Module <conversor> ignored due to previous errors.
+Verilog file C:/Documents and Settings/Administrador/Escritorio/conversor/conversor.v ignored due to errors
