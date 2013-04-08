@@ -19,7 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module conversor
-#(parameter N=4)
+#(parameter N=4 , parameter logN = 2)
 (
     input entrada_serie,
     input [N-1:0]patron_A,
@@ -34,17 +34,18 @@ module conversor
     );
 
 	reg [N-1:0]dato;
-	integer cuenta = 0;
+	reg [logN-1:0]cuenta = 0;
+	
 	
 	always @(posedge clk)
 	begin
 		if(cuenta==(N))
 			begin
-			cuenta=0;
+			cuenta<=0;
 			end
-		
+		//dato = { dato , entrada_serie };
 		dato [cuenta] <= entrada_serie;
-		cuenta=cuenta+1;
+		cuenta<=cuenta+1;
 			
 	end
 	

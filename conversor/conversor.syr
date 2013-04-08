@@ -3,14 +3,14 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.39 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.41 secs
  
 --> Reading design: conversor.prj
 
@@ -115,6 +115,7 @@ Analysis of file <"conversor.prj"> succeeded.
 =========================================================================
 Analyzing hierarchy for module <conversor> in library <work> with parameters.
 	N = "00000000000000000000000000000100"
+	logN = "00000000000000000000000000000010"
 
 
 =========================================================================
@@ -122,6 +123,7 @@ Analyzing hierarchy for module <conversor> in library <work> with parameters.
 =========================================================================
 Analyzing top module <conversor>.
 	N = 32'sb00000000000000000000000000000100
+	logN = 32'sb00000000000000000000000000000010
 Module <conversor> is correct for synthesis.
  
 
@@ -136,12 +138,11 @@ Synthesizing Unit <conversor>.
     Found 4-bit comparator equal for signal <out_A>.
     Found 4-bit comparator equal for signal <out_B>.
     Found 4-bit comparator equal for signal <out_C>.
-    Found 32-bit up counter for signal <cuenta>.
+    Found 2-bit up counter for signal <cuenta>.
     Found 4-bit register for signal <dato>.
     Summary:
 	inferred   1 Counter(s).
 	inferred   4 D-type flip-flop(s).
-	inferred   1 Adder/Subtractor(s).
 	inferred   3 Comparator(s).
 Unit <conversor> synthesized.
 
@@ -150,10 +151,8 @@ Unit <conversor> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 1
- 32-bit adder                                          : 1
 # Counters                                             : 1
- 32-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
 # Registers                                            : 4
  1-bit register                                        : 4
 # Comparators                                          : 3
@@ -170,10 +169,8 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 1
- 2-bit adder                                           : 1
 # Counters                                             : 1
- 32-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
 # Registers                                            : 4
  Flip-Flops                                            : 4
 # Comparators                                          : 3
@@ -189,7 +186,7 @@ Optimizing unit <conversor> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block conversor, actual ratio is 2.
+Found area constraint ratio of 100 (+ 5) on block conversor, actual ratio is 0.
 
 Final Macro Processing ...
 
@@ -197,8 +194,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 36
- Flip-Flops                                            : 36
+# Registers                                            : 6
+ Flip-Flops                                            : 6
 
 =========================================================================
 
@@ -227,19 +224,14 @@ Design Statistics
 # IOs                              : 22
 
 Cell Usage :
-# BELS                             : 126
-#      GND                         : 1
-#      INV                         : 1
-#      LUT1                        : 31
-#      LUT2                        : 6
-#      LUT3                        : 1
-#      LUT4                        : 14
-#      MUXCY                       : 39
+# BELS                             : 15
+#      LUT2                        : 8
+#      LUT4                        : 6
 #      VCC                         : 1
-#      XORCY                       : 32
-# FlipFlops/Latches                : 36
+# FlipFlops/Latches                : 6
+#      FD                          : 1
 #      FDE                         : 4
-#      FDR                         : 32
+#      FDR                         : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 21
@@ -252,9 +244,9 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-5 
 
- Number of Slices:                       27  out of    960     2%  
- Number of Slice Flip Flops:             36  out of   1920     1%  
- Number of 4 input LUTs:                 53  out of   1920     2%  
+ Number of Slices:                        8  out of    960     0%  
+ Number of Slice Flip Flops:              6  out of   1920     0%  
+ Number of 4 input LUTs:                 14  out of   1920     0%  
  Number of IOs:                          22
  Number of bonded IOBs:                  22  out of     83    26%  
  Number of GCLKs:                         1  out of     24     4%  
@@ -280,7 +272,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 36    |
+clk                                | BUFGP                  | 6     |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -291,7 +283,7 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 5.215ns (Maximum Frequency: 191.769MHz)
+   Minimum period: 2.656ns (Maximum Frequency: 376.499MHz)
    Minimum input arrival time before clock: 1.912ns
    Maximum output required time after clock: 6.341ns
    Maximum combinational path delay: 6.874ns
@@ -302,34 +294,25 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 5.215ns (frequency: 191.769MHz)
-  Total number of paths / destination ports: 1592 / 68
+  Clock period: 2.656ns (frequency: 376.499MHz)
+  Total number of paths / destination ports: 11 / 6
 -------------------------------------------------------------------------
-Delay:               5.215ns (Levels of Logic = 10)
-  Source:            cuenta_8 (FF)
+Delay:               2.656ns (Levels of Logic = 1)
+  Source:            cuenta_1 (FF)
   Destination:       dato_0 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: cuenta_8 to dato_0
+  Data Path: cuenta_1 to dato_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.514   0.532  cuenta_8 (cuenta_8)
-     LUT4:I0->O            1   0.612   0.000  cuenta_cmp_eq0000_wg_lut<0> (cuenta_cmp_eq0000_wg_lut<0>)
-     MUXCY:S->O            1   0.404   0.000  cuenta_cmp_eq0000_wg_cy<0> (cuenta_cmp_eq0000_wg_cy<0>)
-     MUXCY:CI->O           1   0.052   0.000  cuenta_cmp_eq0000_wg_cy<1> (cuenta_cmp_eq0000_wg_cy<1>)
-     MUXCY:CI->O           1   0.052   0.000  cuenta_cmp_eq0000_wg_cy<2> (cuenta_cmp_eq0000_wg_cy<2>)
-     MUXCY:CI->O           1   0.052   0.000  cuenta_cmp_eq0000_wg_cy<3> (cuenta_cmp_eq0000_wg_cy<3>)
-     MUXCY:CI->O           1   0.052   0.000  cuenta_cmp_eq0000_wg_cy<4> (cuenta_cmp_eq0000_wg_cy<4>)
-     MUXCY:CI->O           1   0.052   0.000  cuenta_cmp_eq0000_wg_cy<5> (cuenta_cmp_eq0000_wg_cy<5>)
-     MUXCY:CI->O           1   0.052   0.000  cuenta_cmp_eq0000_wg_cy<6> (cuenta_cmp_eq0000_wg_cy<6>)
-     MUXCY:CI->O          33   0.289   1.103  cuenta_cmp_eq0000_wg_cy<7> (cuenta_cmp_eq0000)
-     LUT3:I2->O            1   0.612   0.357  dato_0_not00011 (dato_0_not0001)
-     FDE:CE                    0.483          dato_0
+     FD:C->Q               5   0.514   0.690  cuenta_1 (cuenta_1)
+     LUT2:I0->O            1   0.612   0.357  dato_1_cmp_eq00001 (dato_1_cmp_eq0000)
+     FDE:CE                    0.483          dato_1
     ----------------------------------------
-    Total                      5.215ns (3.223ns logic, 1.992ns route)
-                                       (61.8% logic, 38.2% route)
+    Total                      2.656ns (1.609ns logic, 1.047ns route)
+                                       (60.6% logic, 39.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
@@ -337,15 +320,15 @@ Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
 -------------------------------------------------------------------------
 Offset:              1.912ns (Levels of Logic = 1)
   Source:            entrada_serie (PAD)
-  Destination:       dato_1 (FF)
+  Destination:       dato_0 (FF)
   Destination Clock: clk rising
 
-  Data Path: entrada_serie to dato_1
+  Data Path: entrada_serie to dato_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             5   1.106   0.538  entrada_serie_IBUF (out_serie_OBUF)
-     FDE:D                     0.268          dato_1
+     FDE:D                     0.268          dato_0
     ----------------------------------------
     Total                      1.912ns (1.374ns logic, 0.538ns route)
                                        (71.9% logic, 28.1% route)
@@ -364,9 +347,9 @@ Offset:              6.341ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDE:C->Q              4   0.514   0.568  dato_0 (dato_0)
-     LUT4:I1->O            1   0.612   0.509  out_B426 (out_B426)
-     LUT2:I0->O            1   0.612   0.357  out_B454 (out_B_OBUF)
-     OBUF:I->O                 3.169          out_B_OBUF (out_B)
+     LUT4:I1->O            1   0.612   0.509  out_C426 (out_C426)
+     LUT2:I0->O            1   0.612   0.357  out_C454 (out_C_OBUF)
+     OBUF:I->O                 3.169          out_C_OBUF (out_C)
     ----------------------------------------
     Total                      6.341ns (4.907ns logic, 1.434ns route)
                                        (77.4% logic, 22.6% route)
@@ -394,8 +377,8 @@ Delay:               6.874ns (Levels of Logic = 4)
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.15 secs
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.24 secs
  
 --> 
 
