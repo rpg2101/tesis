@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">mat_B&lt;8:7&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">mat_B&lt;5:4&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">mat_B&lt;2:1&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">acum</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_B_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_B_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_B_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_B_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_B_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_B_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_B_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_B_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_B_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_B_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_B_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_B_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
+</msg>
+
+</messages>
+

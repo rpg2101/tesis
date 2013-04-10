@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=Z:\Prueba_led\impact.xsl
+OUTFILE=Z:\Prueba_led\impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=Z:\Prueba_led
+LICENSE=iMPACT
+USER_INFO=iMPACT

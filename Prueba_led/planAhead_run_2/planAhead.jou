@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# PlanAhead v14.2
+# Build 194362 by xbuild on Fri Jul 20 18:52:36 MDT 2012
+# Start of session at: Tue Apr 09 21:53:14 2013
+# Process ID: 380
+# Log file: Z:/Prueba_led/planAhead_run_2/planAhead.log
+# Journal file: Z:/Prueba_led/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source Z:/Prueba_led/pa.fromHdl.tcl
+startgroup
+set_property package_pin J15 [get_ports led2]
+endgroup
+startgroup
+set_property package_pin K15 [get_ports led3]
+endgroup
+startgroup
+set_property package_pin K14 [get_ports led4]
+endgroup
+startgroup
+set_property package_pin R17 [get_ports sw1]
+endgroup
+startgroup
+set_property package_pin N17 [get_ports sw2]
+endgroup
+startgroup
+set_property package_pin L3 [get_ports sw3]
+endgroup
+set_property package_pin "" [get_ports [list  sw4]]
+startgroup
+set_property package_pin L13 [get_ports sw3]
+endgroup
+startgroup
+set_property package_pin L14 [get_ports sw4]
+endgroup
+save_design

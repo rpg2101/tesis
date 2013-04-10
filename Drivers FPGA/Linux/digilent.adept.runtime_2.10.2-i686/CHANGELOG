@@ -1,0 +1,45 @@
+Digilent Adept Runtime for Linux Change Log
+===========================================
+
+Adept Runtime for Linux 2.10.2 (07/12/2012):
+    1. Added support for IEEE 1149.7-2009 by extending the DJTG API set to
+       include the following functions: DjtgSetScanFormat,
+       DjtgGetScanFormat, DjtgSetReadyCnt, DjtgGetReadyCnt,
+       DjtgSetDelayCnt, DjtgGetDelayCnt, DjtgCheckPacket, and DjtgEscape.
+       Please note that not all of Digilent's programming solutions are
+       capable of interfacing with IEEE 1149.7-2009 targets.
+    2. Added IEEE 1149.7-2009 for the JTAG-HS2 and JTAG-SMT2.
+    3. Modified the UDEV rules file ("52-digilent-usb.rules") to use the
+       "ATTR{}" syntax for matching SYSFS attributes. Previously the
+       "SYSFS{}" syntax was used for matching SYSFS attributes, which
+       resulted in users being required to have superuser privileges when
+       accessing Digilent USB devices on distributions running UDEV version
+       174 or newer (Fedora 17 and Ubuntu 12.04). While not officially
+       supported, this version of the Adept Runtime for Linux has been
+       confirmed to work with Fedora 17 and Ubuntu 12.04.
+    4. Modified install script ("install.sh") to detect which version of
+       UDEV is installed and install a UDEV rules file that uses the
+       "SYSFS{}" syntax for matching SYSFS attributes when appropriate
+       (UDEV versions prior to 098).
+
+Adept Runtime for Linux 2.9.9 (04/06/2012):
+    1. Fixed a bug that caused a segfault under distributions running
+       Kernel 3. While not officially supported, the Adept Runtime for
+       Linux has been confirmed to work with Fedora 16 and Ubuntu 11.10
+       after this bugfix was implemented.
+
+Adept Runtime for Linux 2.9.8 (03/29/2012):
+    1. Fixed a bug that was preventing multiple users from opening a handle
+       to the same device.
+
+Adept Runtime for Linux 2.9.7 (03/27/2012):
+    1. Fixed a bug that caused inconsistent behavior while using GDB to
+       debug applications that were linked against the Runtime.
+
+Adept Runtime for Linux 2.9.6 (03/09/2012):
+    1. Added support for new USB devices: JTAG-HS2, JTAG-SMT2, and ZED.
+    
+Adept Runtime for Linux 2.9.5 (02/17/2012):
+    1. Fixed a bug in install script that was causing the UDEV rules not to
+       be installed under distributions running Kernel 3.
+

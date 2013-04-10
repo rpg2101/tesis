@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# PlanAhead v14.2
+# Build 194362 by xbuild on Fri Jul 20 18:52:36 MDT 2012
+# Start of session at: Tue Apr 09 21:53:29 2013
+# Process ID: 1812
+# Log file: Z:/Prueba_led/planAhead_run_3/planAhead.log
+# Journal file: Z:/Prueba_led/planAhead_run_3/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.2/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.2/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.2/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source Z:/Prueba_led/pa.fromHdl.tcl
+# create_project -name Prueba_led -dir "Z:/Prueba_led/planAhead_run_4" -part xc3s1200efg320-5
+ERROR: [Common 17-53] User Exception: Project already exists on disk, please use '-force' option to overwrite: 
+     Z:/Prueba_led/planAhead_run_4/Prueba_led.ppr
+     Z:/Prueba_led/planAhead_run_4/Prueba_led.data
+exit
+INFO: [Common 17-206] Exiting PlanAhead...
+INFO: [Common 17-83] Releasing license: PlanAhead

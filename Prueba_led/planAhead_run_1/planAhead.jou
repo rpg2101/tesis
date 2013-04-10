@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.2
+# Build 194362 by xbuild on Fri Jul 20 18:52:36 MDT 2012
+# Start of session at: Tue Apr 09 21:52:26 2013
+# Process ID: 548
+# Log file: Z:/Prueba_led/planAhead_run_1/planAhead.log
+# Journal file: Z:/Prueba_led/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source Z:/Prueba_led/pa.fromHdl.tcl
