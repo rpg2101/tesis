@@ -1,5 +1,17 @@
 ISim log file
-Running: C:\Documents and Settings\Administrador\Escritorio\mult_mat\test_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Documents and Settings/Administrador/Escritorio/mult_mat/test_isim_beh.wdb 
+Running: Z:\mult_mat\test_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb Z:/mult_mat/test_isim_beh.wdb 
+ISim P.28xd (signature 0x1048c146)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+INFO: There is another simulation running in the same directory. Using database file name isim1.wdb.
 ISim P.28xd (signature 0x1048c146)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -51,3 +63,41 @@ This is a Lite version of ISim.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+ISim P.28xd (signature 0x1048c146)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+WARNING: File "//VBOXSVR/tesis/mult_mat/test.v" Line 30.  For instance test/uut/, width 18 of formal port matriz_A is not equal to width 12 of actual variable matriz_A. 
+WARNING: File "//VBOXSVR/tesis/mult_mat/test.v" Line 31.  For instance test/uut/, width 27 of formal port matriz_B is not equal to width 12 of actual variable matriz_B. 
+WARNING: File "//VBOXSVR/tesis/mult_mat/test.v" Line 34.  For instance test/uut/, width 18 of formal port matriz_resultado is not equal to width 12 of actual signal matriz_resultado.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+ISim P.28xd (signature 0x1048c146)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+WARNING: File "//VBOXSVR/tesis/mult_mat/test.v" Line 30.  For instance test/uut/, width 18 of formal port matriz_A is not equal to width 12 of actual variable matriz_A. 
+WARNING: File "//VBOXSVR/tesis/mult_mat/test.v" Line 31.  For instance test/uut/, width 27 of formal port matriz_B is not equal to width 12 of actual variable matriz_B. 
+WARNING: File "//VBOXSVR/tesis/mult_mat/test.v" Line 34.  For instance test/uut/, width 18 of formal port matriz_resultado is not equal to width 12 of actual signal matriz_resultado.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+ERROR: at 0 ps: Iteration limit 10000 is reached. Possible zero delay oscillation detected where simulation can not advance in time because signals can not resolve to a stable value in File "//VBOXSVR/tesis/mult_mat/mult_mat.v" Line 51. Please correct this code in order to advance past the current simulation time.
+ in File "//VBOXSVR/tesis/mult_mat/mult_mat.v" Line 51 
+ERROR: 
+INFO: Simulator is stopped.
+ISim P.28xd (signature 0x1048c146)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+ERROR: at 0 ps: Iteration limit 10000 is reached. Possible zero delay oscillation detected where simulation can not advance in time because signals can not resolve to a stable value in File "//VBOXSVR/tesis/mult_mat/mult_mat.v" Line 51. Please correct this code in order to advance past the current simulation time.
+ in File "//VBOXSVR/tesis/mult_mat/mult_mat.v" Line 51 
+ERROR: 
+INFO: Simulator is stopped.

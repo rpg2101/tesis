@@ -27,11 +27,11 @@ module test;
 	// Inputs
 	reg clk_enable;
 	reg clk;
-	reg [5:0] matriz_A;
-	reg [8:0] matriz_B;
+	reg [11:0] matriz_A;
+	reg [11:0] matriz_B;
 
 	// Outputs
-	wire [5:0] matriz_resultado;
+	wire [11:0] matriz_resultado;
 
 	// Instantiate the Unit Under Test (UUT)
 	mult_mat uut (
@@ -41,19 +41,18 @@ module test;
 		.matriz_B(matriz_B), 
 		.matriz_resultado(matriz_resultado)
 	);
-	always #10 clk = !clk;
+	always #10 clk = ~clk;
 	
 	initial begin
 		// Initialize Inputs
-		clk_enable = 0;
-		clk = 0;
-		matriz_A = 6'b111111;
-		matriz_B = 9'b111111111;
+		#10 clk_enable = 0;
+		clk=0;
 
-		// Wait 100 ns for global reset to finish
-		#100;
-        
-		// Add stimulus here
+		matriz_A = 12'b001010000011;
+		matriz_B = 12'b001010010001;
+		#10 clk_enable = 1;
+		#10 clk_enable = 0;
+		
 
 	end
       

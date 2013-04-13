@@ -19,10 +19,10 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module mult_mat
-#(	parameter Bit=1,
+#(	parameter Bit=3,
 	parameter N=2,
-	parameter M=3,
-	parameter P=3
+	parameter M=2,
+	parameter P=2
 	
 )
 (
@@ -50,18 +50,18 @@ module mult_mat
 	
 	always @(*)
 	begin	
-		acum = 0;
 		for(i=0;i<N;i=i+1)
 		begin
 			for (j=0;j<P;j=j+1)
 			begin
-				acum = 0;
+				acum <= 0;
 				for (k=0;k<M;k=k+1)
 				begin
-						acum = acum + mat_A[(i*M)+k] * mat_B[(k*P)];	
+						acum <= acum + mat_A[(i*M*Bit)+((k+1)*Bit-1)-:Bit] * mat_B[(j*M*Bit)+((k+1)*Bit-1)-:Bit];	
 				end
-				matriz_resultado [i*M+j] <= acum;
+				matriz_resultado [(i*M*Bit)+((j+1)*Bit-1)-:Bit] <= acum;
 			end //for j
 		end//for i
 	end //always
 endmodule
+

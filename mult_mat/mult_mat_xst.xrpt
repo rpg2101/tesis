@@ -5,14 +5,14 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Tue Apr 09 21:37:16 2013">
+  <application stringID="Xst" timeStamp="Fri Apr 12 19:59:34 2013">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="C:\Xilinx\14.2\ISE_DS\ISE\\lib\nt;C:\Xilinx\14.2\ISE_DS\ISE\\bin\nt;C:\Xilinx\14.2\ISE_DS\ISE\bin\nt;C:\Xilinx\14.2\ISE_DS\ISE\lib\nt;C:\Xilinx\Vivado\2012.2\bin;C:\Xilinx\14.2\ISE_DS\PlanAhead\bin;C:\Xilinx\14.2\ISE_DS\EDK\bin\nt;C:\Xilinx\14.2\ISE_DS\EDK\lib\nt;C:\Xilinx\14.2\ISE_DS\EDK\gnu\microblaze\nt\bin;C:\Xilinx\14.2\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;C:\Xilinx\14.2\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\14.2\ISE_DS\EDK\gnu\arm\nt\bin;C:\Xilinx\14.2\ISE_DS\common\bin\nt;C:\Xilinx\14.2\ISE_DS\common\lib\nt;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Archivos de programa\Flash Magic;C:\Archivos de programa\Microchip\MPLAB IDE\VDI;C:\sistema_comp;C:\sistema_comp\al_al;C:\ARCHIV~1\FLASHM~1"/>
+          <item stringID="value" value="C:\Xilinx\14.2\ISE_DS\ISE\\lib\nt;C:\Xilinx\14.2\ISE_DS\ISE\\bin\nt;C:\Xilinx\14.2\ISE_DS\ISE\bin\nt;C:\Xilinx\14.2\ISE_DS\ISE\lib\nt;C:\Xilinx\Vivado\2012.2\bin;C:\Xilinx\14.2\ISE_DS\PlanAhead\bin;C:\Xilinx\14.2\ISE_DS\EDK\bin\nt;C:\Xilinx\14.2\ISE_DS\EDK\lib\nt;C:\Xilinx\14.2\ISE_DS\EDK\gnu\microblaze\nt\bin;C:\Xilinx\14.2\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;C:\Xilinx\14.2\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\14.2\ISE_DS\EDK\gnu\arm\nt\bin;C:\Xilinx\14.2\ISE_DS\common\bin\nt;C:\Xilinx\14.2\ISE_DS\common\lib\nt;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -49,7 +49,7 @@
         <column stringID="speed"/>
         <row stringID="row" value="0">
           <item stringID="arch" value="       Intel(R) Core(TM) i5-2557M CPU @ 1.70GHz"/>
-          <item stringID="speed" value="1675 MHz"/>
+          <item stringID="speed" value="1690 MHz"/>
         </row>
       </table>
     </section>
@@ -110,23 +110,17 @@
       <item DEFAULT="0%" label="-slice_utilization_ratio_maxmargin" stringID="XST_SLICEUTILIZATIONRATIOMAXMARGIN" value="5"/>
     </section>
     <section stringID="XST_HDL_SYNTHESIS_REPORT">
-      <item dataType="int" stringID="XST_ADDERSSUBTRACTORS" value="4"></item>
-      <item dataType="int" stringID="XST_REGISTERS" value="2">
-        <item dataType="int" stringID="XST_6BIT_REGISTER" value="1"/>
-        <item dataType="int" stringID="XST_9BIT_REGISTER" value="1"/>
+      <item dataType="int" stringID="XST_ADDERSSUBTRACTORS" value="1">
+        <item dataType="int" stringID="XST_4BIT_ADDER" value="1"/>
       </item>
+      <item dataType="int" stringID="XST_REGISTERS" value="2"></item>
     </section>
     <section stringID="XST_ADVANCED_HDL_SYNTHESIS_REPORT">
-      <item dataType="int" stringID="XST_ADDERSSUBTRACTORS" value="2"></item>
-      <item dataType="int" stringID="XST_REGISTERS" value="9">
-        <item dataType="int" stringID="XST_FLIPFLOPS" value="9"/>
+      <item dataType="int" stringID="XST_ADDERSSUBTRACTORS" value="1">
+        <item dataType="int" stringID="XST_4BIT_ADDER" value="1"/>
       </item>
     </section>
-    <section stringID="XST_FINAL_REGISTER_REPORT">
-      <item dataType="int" stringID="XST_REGISTERS" value="9">
-        <item dataType="int" stringID="XST_FLIPFLOPS" value="9"/>
-      </item>
-    </section>
+    <section stringID="XST_FINAL_REGISTER_REPORTFOUND_NO_MACRO"/>
     <section stringID="XST_PARTITION_REPORT">
       <section stringID="XST_PARTITION_IMPLEMENTATION_STATUS">
         <section stringID="XST_NO_PARTITIONS_WERE_FOUND_IN_THIS_DESIGN"/>
@@ -141,31 +135,28 @@
         <item stringID="XST_KEEP_HIERARCHY" value="No"/>
       </section>
       <section stringID="XST_DESIGN_STATISTICS">
-        <item stringID="XST_IOS" value="23"/>
+        <item stringID="XST_IOS" value="38"/>
       </section>
       <section stringID="XST_CELL_USAGE">
         <item dataType="int" stringID="XST_BELS" value="4">
-          <item dataType="int" stringID="XST_LUT3" value="2"/>
-          <item dataType="int" stringID="XST_LUT4" value="2"/>
-        </item>
-        <item dataType="int" stringID="XST_FLIPFLOPSLATCHES" value="9">
-          <item dataType="int" stringID="XST_FDE" value="9"/>
+          <item dataType="int" stringID="XST_GND" value="1"/>
+          <item dataType="int" stringID="XST_LUT2" value="3"/>
         </item>
         <item dataType="int" stringID="XST_CLOCK_BUFFERS" value="1">
           <item dataType="int" stringID="XST_BUFGP" value="1"/>
         </item>
-        <item dataType="int" stringID="XST_IO_BUFFERS" value="16">
-          <item dataType="int" stringID="XST_IBUF" value="10"/>
-          <item dataType="int" stringID="XST_OBUF" value="6"/>
+        <item dataType="int" stringID="XST_IO_BUFFERS" value="19">
+          <item dataType="int" stringID="XST_IBUF" value="7"/>
+          <item dataType="int" stringID="XST_OBUF" value="12"/>
         </item>
       </section>
     </section>
     <section stringID="XST_DEVICE_UTILIZATION_SUMMARY">
       <item stringID="XST_SELECTED_DEVICE" value="3s100ecp132-5"/>
       <item AVAILABLE="960" dataType="int" label="Number of Slices" stringID="XST_NUMBER_OF_SLICES" value="2"/>
-      <item AVAILABLE="1920" dataType="int" label="Number of 4 input LUTs" stringID="XST_NUMBER_OF_4_INPUT_LUTS" value="4"/>
-      <item dataType="int" label="Number of IOs" stringID="XST_NUMBER_OF_IOS" value="23"/>
-      <item AVAILABLE="83" dataType="int" label="Number of bonded IOBs" stringID="XST_NUMBER_OF_BONDED_IOBS" value="17"/>
+      <item AVAILABLE="1920" dataType="int" label="Number of 4 input LUTs" stringID="XST_NUMBER_OF_4_INPUT_LUTS" value="3"/>
+      <item dataType="int" label="Number of IOs" stringID="XST_NUMBER_OF_IOS" value="38"/>
+      <item AVAILABLE="83" dataType="int" label="Number of bonded IOBs" stringID="XST_NUMBER_OF_BONDED_IOBS" value="20"/>
       <item AVAILABLE="24" dataType="int" label="Number of GCLKs" stringID="XST_NUMBER_OF_GCLKS" value="1"/>
     </section>
     <section stringID="XST_PARTITION_RESOURCE_SUMMARY">
@@ -173,8 +164,8 @@
     </section>
     <section stringID="XST_ERRORS_STATISTICS">
       <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_ERRORS" value="0"/>
-      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="16"/>
-      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_INFOS" value="0"/>
+      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="23"/>
+      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_INFOS" value="1"/>
     </section>
   </application>
 
