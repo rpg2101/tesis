@@ -26,10 +26,10 @@ module test;
 
 	// Inputs
 	reg [23:0] in1;
-	reg [11:0] in2;
+	reg [23:0] in2;
 
 	// Outputs
-	wire [11:0] out;
+	wire [31:0] out;
 
 	// Instantiate the Unit Under Test (UUT)
 	multiplicador uut (
@@ -45,9 +45,9 @@ module test;
 
 		// Wait 100 ns for global reset to finish
 		#100;
-      #10 in1 = 24'b0010110110100101101101;
-		#10 in2 = 12'b011001001101;
-      
+      #10 in1 = 24'b 000010110110100101101101;
+		#10 in2 = 24'b 000010110110100101101101;
+		
 		
 		// Add stimulus here
 

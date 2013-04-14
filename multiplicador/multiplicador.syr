@@ -3,14 +3,14 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.21 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.23 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.22 secs
  
 --> Reading design: multiplicador.prj
 
@@ -115,6 +115,7 @@ Analysis of file <"multiplicador.prj"> succeeded.
 =========================================================================
 Analyzing hierarchy for module <multiplicador> in library <work> with parameters.
 	Bit = "00000000000000000000000000000011"
+	EBit = "00000000000000000000000000001000"
 	M = "00000000000000000000000000000100"
 	N = "00000000000000000000000000000010"
 	P = "00000000000000000000000000000010"
@@ -125,6 +126,7 @@ Analyzing hierarchy for module <multiplicador> in library <work> with parameters
 =========================================================================
 Analyzing top module <multiplicador>.
 	Bit = 32'sb00000000000000000000000000000011
+	EBit = 32'sb00000000000000000000000000001000
 	M = 32'sb00000000000000000000000000000100
 	N = 32'sb00000000000000000000000000000010
 	P = 32'sb00000000000000000000000000000010
@@ -139,13 +141,29 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <multiplicador>.
     Related source file is "multiplicador.v".
-    Found 3x3-bit multiplier for signal <filasmatrizA[0].interna>.
-    Found 6-bit adder for signal <filasmatrizA[0].sumainterna<3:1>>.
-    Found 3x3-bit multiplier for signal <filasmatrizA[1].interna>.
-    Found 6-bit adder for signal <filasmatrizA[1].sumainterna<3:1>>.
+    Found 3x3-bit multiplier for signal <filasmatrizA[0].columnasmatrizB[0].interna_0$mult0000> created at line 49.
+    Found 3x3-bit multiplier for signal <filasmatrizA[0].columnasmatrizB[0].interna_1$mult0000> created at line 49.
+    Found 3x3-bit multiplier for signal <filasmatrizA[0].columnasmatrizB[0].interna_2$mult0000> created at line 49.
+    Found 3x3-bit multiplier for signal <filasmatrizA[0].columnasmatrizB[0].interna_3$mult0000> created at line 49.
+    Found 8-bit adder for signal <filasmatrizA[0].columnasmatrizB[0].sumainterna<3:1>>.
+    Found 3x3-bit multiplier for signal <filasmatrizA[0].columnasmatrizB[1].interna_0$mult0000> created at line 49.
+    Found 3x3-bit multiplier for signal <filasmatrizA[0].columnasmatrizB[1].interna_1$mult0000> created at line 49.
+    Found 3x3-bit multiplier for signal <filasmatrizA[0].columnasmatrizB[1].interna_2$mult0000> created at line 49.
+    Found 3x3-bit multiplier for signal <filasmatrizA[0].columnasmatrizB[1].interna_3$mult0000> created at line 49.
+    Found 8-bit adder for signal <filasmatrizA[0].columnasmatrizB[1].sumainterna<3:1>>.
+    Found 3x3-bit multiplier for signal <filasmatrizA[1].columnasmatrizB[0].interna_0$mult0000> created at line 49.
+    Found 3x3-bit multiplier for signal <filasmatrizA[1].columnasmatrizB[0].interna_1$mult0000> created at line 49.
+    Found 3x3-bit multiplier for signal <filasmatrizA[1].columnasmatrizB[0].interna_2$mult0000> created at line 49.
+    Found 3x3-bit multiplier for signal <filasmatrizA[1].columnasmatrizB[0].interna_3$mult0000> created at line 49.
+    Found 8-bit adder for signal <filasmatrizA[1].columnasmatrizB[0].sumainterna<3:1>>.
+    Found 3x3-bit multiplier for signal <filasmatrizA[1].columnasmatrizB[1].interna_0$mult0000> created at line 49.
+    Found 3x3-bit multiplier for signal <filasmatrizA[1].columnasmatrizB[1].interna_1$mult0000> created at line 49.
+    Found 3x3-bit multiplier for signal <filasmatrizA[1].columnasmatrizB[1].interna_2$mult0000> created at line 49.
+    Found 3x3-bit multiplier for signal <filasmatrizA[1].columnasmatrizB[1].interna_3$mult0000> created at line 49.
+    Found 8-bit adder for signal <filasmatrizA[1].columnasmatrizB[1].sumainterna<3:1>>.
     Summary:
-	inferred   6 Adder/Subtractor(s).
-	inferred   8 Multiplier(s).
+	inferred  12 Adder/Subtractor(s).
+	inferred  16 Multiplier(s).
 Unit <multiplicador> synthesized.
 
 
@@ -153,10 +171,10 @@ Unit <multiplicador> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Multipliers                                          : 8
- 3x3-bit multiplier                                    : 8
-# Adders/Subtractors                                   : 6
- 6-bit adder                                           : 6
+# Multipliers                                          : 16
+ 3x3-bit multiplier                                    : 16
+# Adders/Subtractors                                   : 12
+ 8-bit adder                                           : 12
 
 =========================================================================
 
@@ -169,10 +187,10 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Multipliers                                          : 8
- 3x3-bit multiplier                                    : 8
-# Adders/Subtractors                                   : 6
- 6-bit adder                                           : 6
+# Multipliers                                          : 16
+ 3x3-bit multiplier                                    : 16
+# Adders/Subtractors                                   : 12
+ 8-bit adder                                           : 12
 
 =========================================================================
 
@@ -184,7 +202,7 @@ Optimizing unit <multiplicador> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block multiplicador, actual ratio is 9.
+Found area constraint ratio of 100 (+ 5) on block multiplicador, actual ratio is 19.
 
 Final Macro Processing ...
 
@@ -216,21 +234,22 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 48
+# IOs                              : 80
 
 Cell Usage :
-# BELS                             : 207
+# BELS                             : 445
 #      GND                         : 1
-#      LUT2                        : 23
-#      LUT3                        : 22
-#      LUT4                        : 97
-#      MULT_AND                    : 2
-#      MUXCY                       : 20
-#      MUXF5                       : 18
-#      XORCY                       : 24
-# IO Buffers                       : 48
-#      IBUF                        : 36
-#      OBUF                        : 12
+#      LUT1                        : 4
+#      LUT2                        : 38
+#      LUT3                        : 44
+#      LUT4                        : 206
+#      MULT_AND                    : 4
+#      MUXCY                       : 56
+#      MUXF5                       : 32
+#      XORCY                       : 60
+# IO Buffers                       : 80
+#      IBUF                        : 48
+#      OBUF                        : 32
 =========================================================================
 
 Device utilization summary:
@@ -238,10 +257,10 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-5 
 
- Number of Slices:                       78  out of    960     8%  
- Number of 4 input LUTs:                142  out of   1920     7%  
- Number of IOs:                          48
- Number of bonded IOBs:                  48  out of     83    57%  
+ Number of Slices:                      163  out of    960    16%  
+ Number of 4 input LUTs:                292  out of   1920    15%  
+ Number of IOs:                          80
+ Number of bonded IOBs:                  80  out of     83    96%  
 
 ---------------------------
 Partition Resource Summary:
@@ -274,7 +293,7 @@ Speed Grade: -5
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 14.638ns
+   Maximum combinational path delay: 15.102ns
 
 Timing Detail:
 --------------
@@ -282,42 +301,42 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 8116 / 12
+  Total number of paths / destination ports: 43372 / 32
 -------------------------------------------------------------------------
-Delay:               14.638ns (Levels of Logic = 13)
-  Source:            in2<4> (PAD)
-  Destination:       out<5> (PAD)
+Delay:               15.102ns (Levels of Logic = 13)
+  Source:            in2<19> (PAD)
+  Destination:       out<31> (PAD)
 
-  Data Path: in2<4> to out<5>
+  Data Path: in2<19> to out<31>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            14   1.106   1.002  in2_4_IBUF (in2_4_IBUF)
-     LUT4:I0->O            2   0.612   0.449  Mmult_filasmatrizA[0].interna<1>_Madd_lut<2>1 (Mmult_filasmatrizA[0].interna<1>_Madd_2)
-     LUT3:I1->O            1   0.612   0.426  Mmult_filasmatrizA[0].interna<1>_Madd1_lut<2>1 (Mmult_filasmatrizA[0].interna<1>_Madd1_lut<2>)
-     LUT4:I1->O            2   0.612   0.532  Mmult_filasmatrizA[0].interna<1>_Madd1_xor<2>11 (filasmatrizA[0]_interna<1><2>)
-     LUT3:I0->O            1   0.612   0.360  Madd_filasmatrizA[0].sumainterna<2>C11 (Madd_filasmatrizA[0].sumainterna<2>C1)
-     LUT4:I3->O            1   0.612   0.360  Madd_filasmatrizA[0].sumainterna<2>_Madd_lut<3>_SW0 (N44)
-     LUT4:I3->O            1   0.612   0.000  Madd_filasmatrizA[0].sumainterna<2>_Madd_lut<3> (Madd_filasmatrizA[0].sumainterna<2>_Madd_lut<3>)
-     MUXCY:S->O            1   0.404   0.000  Madd_filasmatrizA[0].sumainterna<2>_Madd_cy<3> (Madd_filasmatrizA[0].sumainterna<2>_Madd_cy<3>)
-     XORCY:CI->O           1   0.699   0.387  Madd_filasmatrizA[0].sumainterna<2>_Madd_xor<4> (filasmatrizA[0]_sumainterna<2><4>)
-     LUT3:I2->O            1   0.612   0.000  Madd_filasmatrizA[0].sumainterna<3>_lut<4> (Madd_filasmatrizA[0].sumainterna<3>_lut<4>)
-     MUXCY:S->O            0   0.404   0.000  Madd_filasmatrizA[0].sumainterna<3>_cy<4> (Madd_filasmatrizA[0].sumainterna<3>_cy<4>)
-     XORCY:CI->O           1   0.699   0.357  Madd_filasmatrizA[0].sumainterna<3>_xor<5> (out_5_OBUF)
-     OBUF:I->O                 3.169          out_5_OBUF (out<5>)
+     IBUF:I->O            14   1.106   1.002  in2_19_IBUF (in2_19_IBUF)
+     LUT4:I0->O            2   0.612   0.532  Mmult_filasmatrizA[1].columnasmatrizB[1].interna_2_mult0000_Madd_lut<2>1 (Mmult_filasmatrizA[1].columnasmatrizB[1].interna_2_mult0000_Madd_2)
+     LUT4:I0->O            3   0.612   0.520  Mmult_filasmatrizA[1].columnasmatrizB[1].interna_2_mult0000_Madd1_cy<2>1 (Mmult_filasmatrizA[1].columnasmatrizB[1].interna_2_mult0000_Madd1_cy<2>)
+     LUT4:I1->O            3   0.612   0.520  Mmult_filasmatrizA[1].columnasmatrizB[1].interna_2_mult0000_Madd1_cy<3>11 (Mmult_filasmatrizA[1].columnasmatrizB[1].interna_2_mult0000_Madd1_cy<3>)
+     LUT2:I1->O            1   0.612   0.387  Mmult_filasmatrizA[1].columnasmatrizB[1].interna_2_mult0000_Madd1_xor<4>11 (filasmatrizA[1]_columnasmatrizB[1]_interna<2><4>)
+     LUT4:I2->O            1   0.612   0.509  Madd_filasmatrizA[1].columnasmatrizB[1].sumainterna<2>C31 (Madd_filasmatrizA[1].columnasmatrizB[1].sumainterna<2>C3)
+     LUT4:I0->O            1   0.612   0.000  Madd_filasmatrizA[1].columnasmatrizB[1].sumainterna<2>_Madd_lut<5> (Madd_filasmatrizA[1].columnasmatrizB[1].sumainterna<2>_Madd_lut<5>)
+     MUXCY:S->O            1   0.404   0.000  Madd_filasmatrizA[1].columnasmatrizB[1].sumainterna<2>_Madd_cy<5> (Madd_filasmatrizA[1].columnasmatrizB[1].sumainterna<2>_Madd_cy<5>)
+     XORCY:CI->O           1   0.699   0.509  Madd_filasmatrizA[1].columnasmatrizB[1].sumainterna<2>_Madd_xor<6> (filasmatrizA[1]_columnasmatrizB[1]_sumainterna<2><6>)
+     LUT1:I0->O            1   0.612   0.000  Madd_filasmatrizA[1].columnasmatrizB[1].sumainterna<3>_cy<6>_rt (Madd_filasmatrizA[1].columnasmatrizB[1].sumainterna<3>_cy<6>_rt)
+     MUXCY:S->O            0   0.404   0.000  Madd_filasmatrizA[1].columnasmatrizB[1].sumainterna<3>_cy<6> (Madd_filasmatrizA[1].columnasmatrizB[1].sumainterna<3>_cy<6>)
+     XORCY:CI->O           1   0.699   0.357  Madd_filasmatrizA[1].columnasmatrizB[1].sumainterna<3>_xor<7> (out_31_OBUF)
+     OBUF:I->O                 3.169          out_31_OBUF (out<31>)
     ----------------------------------------
-    Total                     14.638ns (10.765ns logic, 3.873ns route)
-                                       (73.5% logic, 26.5% route)
+    Total                     15.102ns (10.765ns logic, 4.337ns route)
+                                       (71.3% logic, 28.7% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.65 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.10 secs
  
 --> 
 
-Total memory usage is 158920 kilobytes
+Total memory usage is 155848 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

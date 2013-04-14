@@ -24,7 +24,6 @@
 static const char *ng0 = "//VBOXSVR/tesis/multiplicador/test.v";
 static int ng1[] = {0, 0};
 static unsigned int ng2[] = {747885U, 0U};
-static unsigned int ng3[] = {1613U, 0U};
 
 
 
@@ -51,7 +50,7 @@ LAB4:    xsi_set_current_line(43, ng0);
     xsi_set_current_line(44, ng0);
     t2 = ((char*)((ng1)));
     t3 = (t0 + 920);
-    xsi_vlogvar_assign_value(t3, t2, 0, 0, 12);
+    xsi_vlogvar_assign_value(t3, t2, 0, 0, 24);
     xsi_set_current_line(47, ng0);
     t2 = (t0 + 1344);
     xsi_process_wait(t2, 100000LL);
@@ -75,9 +74,9 @@ LAB6:    xsi_set_current_line(48, ng0);
     goto LAB1;
 
 LAB7:    xsi_set_current_line(49, ng0);
-    t3 = ((char*)((ng3)));
+    t3 = ((char*)((ng2)));
     t4 = (t0 + 920);
-    xsi_vlogvar_assign_value(t4, t3, 0, 0, 12);
+    xsi_vlogvar_assign_value(t4, t3, 0, 0, 24);
     goto LAB1;
 
 }

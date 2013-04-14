@@ -21,14 +21,15 @@
 module multiplicador
 #(
 	parameter Bit = 3,
+	parameter EBit = 2*Bit+2,
 	parameter M = 4,
 	parameter N = 2,
 	parameter P = 2
 )
 (
     input [(N*M*Bit)-1:0] in1,
-    input [(M*Bit)-1:0] in2,
-    output[ N*Bit*2-1:0] out
+    input [(M*P*Bit)-1:0] in2,
+    output[ P*N*EBit-1:0] out
 );
 	
 	generate
@@ -36,13 +37,16 @@ module multiplicador
 	
 	for (i = 0 ; i < N ; i = i+1)
 	begin : filasmatrizA
-	
-	wire [Bit*2-1:0] interna     [M-1:0];
-	wire [Bit*2-1:0] sumainterna [M-1:0];
+
+	for (j = 0 ; j < P ; j = j+1)
+	begin : columnasmatrizB
+		
+	wire [EBit-1:0] interna     [M-1:0];
+	wire [EBit-1:0] sumainterna [M-1:0];
 	
 	for (k = 0 ; k < M ; k = k +1 )
 	begin : sen_interna
-		assign interna[k] = in1[i*M*Bit+(k+1)*Bit-1 -: Bit] * in2[(k+1)*Bit-1 -: Bit];
+		assign interna[k] = in1[i*M*Bit+(k+1)*Bit-1 -: Bit] * in2[j*M*Bit+(k+1)*Bit-1 -: Bit];
 		if (k==0) 
 		begin
 			assign sumainterna [k] = interna [k]; 
@@ -52,10 +56,9 @@ module multiplicador
 			assign sumainterna [k] = interna [k] + sumainterna [k-1] ;
 		end	
 	end//k
-	assign out [(i+1)*(Bit*2)-1 -: Bit*2] = sumainterna [M-1];
+	assign out [(j*EBit*P)+(i+1)*(EBit)-1 -: EBit] = sumainterna [M-1];
 	
-	
-	//end// j
+	end// j
 	end// i
 	endgenerate
 		
