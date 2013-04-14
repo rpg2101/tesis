@@ -4,9 +4,9 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   19:20:33 03/30/2013
+// Create Date:   17:58:59 04/13/2013
 // Design Name:   mult_mat
-// Module Name:   C:/Documents and Settings/Administrador/Escritorio/mult_mat/test.v
+// Module Name:   Z:/mult_mat/test.v
 // Project Name:  mult_mat
 // Target Device:  
 // Tool versions:  
@@ -41,18 +41,20 @@ module test;
 		.matriz_B(matriz_B), 
 		.matriz_resultado(matriz_resultado)
 	);
-	always #10 clk = ~clk;
-	
+
+	always 
+		#10 clk = ~clk;
+		
 	initial begin
 		// Initialize Inputs
-		#10 clk_enable = 0;
-		clk=0;
-
-		matriz_A = 12'b001010000011;
-		matriz_B = 12'b001010010001;
-		#10 clk_enable = 1;
-		#10 clk_enable = 0;
-		
+		clk_enable = 0;
+		clk = 0;
+		matriz_A = 12'b001001000001000001;  
+		matriz_B = 12'b000011001011001000;
+		// Wait 100 ns for global reset to finish
+  		#10 clk_enable = 1;
+		#30 clk_enable = 0;
+		// Add stimulus here
 
 	end
       

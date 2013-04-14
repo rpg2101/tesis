@@ -5,75 +5,44 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="905" delta="old" >&quot;<arg fmt="%s" index="1">mult_mat.v</arg>&quot; line <arg fmt="%d" index="2">52</arg>: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-<arg fmt="%s" index="3">&lt;matriz_resultado&gt;</arg>
+<msg type="error" file="HDLCompilers" num="26" delta="old" >&quot;<arg fmt="%s" index="1">mult_mat.v</arg>&quot; line <arg fmt="%d" index="2">47</arg> <arg fmt="%s" index="3">unexpected token: &apos;=&apos;</arg>
 </msg>
 
-<msg type="warning" file="Xst" num="643" delta="old" >&quot;<arg fmt="%s" index="1">mult_mat.v</arg>&quot; line <arg fmt="%d" index="2">60</arg>: The result of a <arg fmt="%d" index="3">3</arg>x<arg fmt="%d" index="4">3</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">4</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+<msg type="error" file="HDLCompilers" num="26" delta="old" >&quot;<arg fmt="%s" index="1">mult_mat.v</arg>&quot; line <arg fmt="%d" index="2">47</arg> <arg fmt="%s" index="3">unexpected token: &apos;+&apos;</arg>
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_A_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
+<msg type="error" file="HDLCompilers" num="26" delta="old" >&quot;<arg fmt="%s" index="1">mult_mat.v</arg>&quot; line <arg fmt="%d" index="2">47</arg> <arg fmt="%s" index="3">unexpected token: &apos;[&apos;</arg>
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_A_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
+<msg type="error" file="HDLCompilers" num="26" delta="old" >&quot;<arg fmt="%s" index="1">mult_mat.v</arg>&quot; line <arg fmt="%d" index="2">47</arg> <arg fmt="%s" index="3">expecting &apos;end&apos;, found &apos;(&apos;</arg>
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_A_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
+<msg type="error" file="HDLCompilers" num="26" delta="old" >&quot;<arg fmt="%s" index="1">mult_mat.v</arg>&quot; line <arg fmt="%d" index="2">47</arg> <arg fmt="%s" index="3">unexpected token: &apos;*&apos;</arg>
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_A_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
+<msg type="error" file="HDLCompilers" num="26" delta="old" >&quot;<arg fmt="%s" index="1">mult_mat.v</arg>&quot; line <arg fmt="%d" index="2">47</arg> <arg fmt="%s" index="3">unexpected token: &apos;*&apos;</arg>
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_A_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
+<msg type="error" file="HDLCompilers" num="26" delta="old" >&quot;<arg fmt="%s" index="1">mult_mat.v</arg>&quot; line <arg fmt="%d" index="2">47</arg> <arg fmt="%s" index="3">unexpected token: &apos;)&apos;</arg>
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_A_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
+<msg type="error" file="HDLCompilers" num="26" delta="old" >&quot;<arg fmt="%s" index="1">mult_mat.v</arg>&quot; line <arg fmt="%d" index="2">47</arg> <arg fmt="%s" index="3">expecting &apos;end&apos;, found &apos;+&apos;</arg>
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_A_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
+<msg type="error" file="HDLCompilers" num="26" delta="old" >&quot;<arg fmt="%s" index="1">mult_mat.v</arg>&quot; line <arg fmt="%d" index="2">47</arg> <arg fmt="%s" index="3">expecting &apos;end&apos;, found &apos;(&apos;</arg>
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_A_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
+<msg type="error" file="HDLCompilers" num="26" delta="old" >&quot;<arg fmt="%s" index="1">mult_mat.v</arg>&quot; line <arg fmt="%d" index="2">47</arg> <arg fmt="%s" index="3">unexpected token: &apos;+&apos;</arg>
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_A_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
+<msg type="error" file="HDLCompilers" num="26" delta="old" >&quot;<arg fmt="%s" index="1">mult_mat.v</arg>&quot; line <arg fmt="%d" index="2">47</arg> <arg fmt="%s" index="3">expecting &apos;endgenerate&apos;, found &apos;1&apos;</arg>
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_B_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
+<msg type="error" file="HDLCompilers" num="26" delta="old" >&quot;<arg fmt="%s" index="1">mult_mat.v</arg>&quot; line <arg fmt="%d" index="2">47</arg> <arg fmt="%s" index="3">unexpected token: &apos;-&apos;</arg>
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_B_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
+<msg type="error" file="HDLCompilers" num="26" delta="old" >&quot;<arg fmt="%s" index="1">mult_mat.v</arg>&quot; line <arg fmt="%d" index="2">47</arg> <arg fmt="%s" index="3">expecting &apos;endmodule&apos;, found &apos;1&apos;</arg>
 </msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_B_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_B_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_B_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_B_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_B_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_B_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mat_B_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mult_mat</arg>&gt;.
-</msg>
-
-<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">Mmult_acum_mult0015</arg> by adding <arg fmt="%d" index="2">1</arg> register level(s).
-</msg>
-
-<msg type="warning" file="Xst" num="2170" delta="old" >Unit <arg fmt="%s" index="1">mult_mat</arg> : the following signal(s) form a combinatorial loop: </msg>
-
-<msg type="warning" file="Xst" num="2170" delta="old" >Unit <arg fmt="%s" index="1">mult_mat</arg> : the following signal(s) form a combinatorial loop: </msg>
-
-<msg type="warning" file="Xst" num="2170" delta="old" >Unit <arg fmt="%s" index="1">mult_mat</arg> : the following signal(s) form a combinatorial loop: </msg>
 
 </messages>
 

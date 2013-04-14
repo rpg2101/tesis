@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "Z:/mult_mat/test.xst" -ofn "Z:/mult_mat/test.syr" 

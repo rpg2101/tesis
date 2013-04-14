@@ -33,35 +33,22 @@ module mult_mat
     output reg [Bit*N*P-1:0] matriz_resultado
  );
 	 
-	reg [Bit:0]acum;
-	integer i,j,k;
-	reg [Bit*N*M-1:0] mat_A = 0;
-	reg [Bit*M*P-1:0] mat_B = 0;
+	reg [Bit-1:0]acum = 0;
+	wire[M-1:0] interna;
 	
-	always @(posedge clk)
-	begin
-		if(clk_enable)
-		begin
-			mat_A <= matriz_A ;
-			mat_B <= matriz_B ;
-		end
-	end
-	
-	
-	always @(*)
-	begin	
-		for(i=0;i<N;i=i+1)
-		begin
-			for (j=0;j<P;j=j+1)
-			begin
-				acum <= 0;
-				for (k=0;k<M;k=k+1)
-				begin
-						acum <= acum + mat_A[(i*M*Bit)+((k+1)*Bit-1)-:Bit] * mat_B[(j*M*Bit)+((k+1)*Bit-1)-:Bit];	
-				end
-				matriz_resultado [(i*M*Bit)+((j+1)*Bit-1)-:Bit] <= acum;
-			end //for j
-		end//for i
-	end //always
+   generate 
+	genvar i , j , k;
+	for(i=0;i<N;i=i+1)
+	begin : i_for
+		for (j=0;j<P;j=j+1)
+		begin  : j_for
+			for (k=0;k<M;k=k+1)
+			begin : k_for
+						acum = acum + matriz_A[(i*M*Bit)+(k+1)*(Bit-1)-:Bit] * matriz_B[(j*M*Bit)+(k+1)*(Bit-1)-:Bit];	
+			end
+			matriz_resultado [(i*M*Bit)+(j+1)*(Bit-1)-:Bit] = acum;
+		end //for j
+	end//for i
+	endgenerate
 endmodule
 
