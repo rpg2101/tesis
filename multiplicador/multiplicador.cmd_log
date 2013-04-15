@@ -45,3 +45,4 @@ xst -intstyle ise -ifn "Z:/multiplicador/multiplicador.xst" -ofn "Z:/multiplicad
 xst -intstyle ise -ifn "Z:/multiplicador/multiplicador.xst" -ofn "Z:/multiplicador/multiplicador.syr" 
 xst -intstyle ise -ifn "Z:/multiplicador/multiplicador.xst" -ofn "Z:/multiplicador/multiplicador.syr" 
 xst -intstyle ise -ifn "Z:/multiplicador/multiplicador.xst" -ofn "Z:/multiplicador/multiplicador.syr" 
+xst -intstyle ise -ifn "Z:/multiplicador/multiplicador.xst" -ofn "Z:/multiplicador/multiplicador.syr" 

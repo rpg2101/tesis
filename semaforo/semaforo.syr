@@ -1,0 +1,233 @@
+Release 14.2 - xst P.28xd (nt)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.24 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.25 secs
+ 
+--> Reading design: semaforo.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "semaforo.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "semaforo"
+Output Format                      : NGC
+Target Device                      : xc3s100e-5-cp132
+
+---- Source Options
+Top Module Name                    : semaforo
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "semaforo.v" in library work
+Module <semaforo> compiled
+No errors in compilation
+Analysis of file <"semaforo.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <semaforo> in library <work> with parameters.
+	E0 = "00000000000000000000000000000000"
+	E1 = "00000000000000000000000000000001"
+	E2 = "00000000000000000000000000000010"
+	t_corto = "00000000000000000000000000000011"
+	t_largo = "00000000000000000000000000001010"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <semaforo>.
+	E0 = 32'sb00000000000000000000000000000000
+	E1 = 32'sb00000000000000000000000000000001
+	E2 = 32'sb00000000000000000000000000000010
+	t_corto = 32'sb00000000000000000000000000000011
+	t_largo = 32'sb00000000000000000000000000001010
+Module <semaforo> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <semaforo>.
+    Related source file is "semaforo.v".
+WARNING:Xst:737 - Found 4-bit latch for signal <cuenta>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 2-bit latch for signal <sig_estado>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 4-bit up counter for signal <cuenta>.
+    Found 2-bit register for signal <estado>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
+Unit <semaforo> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 1
+ 2-bit register                                        : 1
+# Latches                                              : 2
+ 2-bit latch                                           : 1
+ 4-bit latch                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1426 - The value init of the FF/Latch 0 hinder the constant cleaning in the block 1.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch 0 hinder the constant cleaning in the block 3.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 2
+ Flip-Flops                                            : 2
+# Latches                                              : 2
+ 2-bit latch                                           : 1
+ 4-bit latch                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <cuenta_1> in Unit <semaforo> is equivalent to the following FF/Latch, which will be removed : <cuenta_3> 
+INFO:Xst:2261 - The FF/Latch <cuenta_0> in Unit <semaforo> is equivalent to the following FF/Latch, which will be removed : <cuenta_2> 
+WARNING:Xst:1426 - The value init of the FF/Latch cuenta_1 hinder the constant cleaning in the block semaforo.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <cuenta_0> has a constant value of 0 in block <semaforo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cuenta_ren_1> (without init value) has a constant value of 0 in block <semaforo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cuenta_ren_2> (without init value) has a constant value of 0 in block <semaforo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cuenta_ren_3> (without init value) has a constant value of 0 in block <semaforo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <estado_0> (without init value) has a constant value of 0 in block <semaforo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sig_estado_0> is unconnected in block <semaforo>.
+
+ERROR:Xst:528 - Multi-source in Unit <semaforo> on signal <cuenta_1>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FDR instance <cuenta_ren_0>
+   Output signal of LDE_1 instance <cuenta_1>
+   Signal <N0> in Unit <semaforo> is assigned to GND
+   Signal <N0> in Unit <LPM_LATCH_6> is assigned to GND
+   Signal <N0> in Unit <LPM_LATCH_7> is assigned to GND
+   Signal <N0> in Unit <LPM_LATCH_7> is assigned to GND
+   Signal <N0> in Unit <LPM_LATCH_1> is assigned to GND
+   Signal <N0> in Unit <LPM_LATCH_5> is assigned to GND
+   Signal <N0> in Unit <LPM_LATCH_4> is assigned to GND
+   Signal <N0> in Unit <LPM_LATCH_3> is assigned to GND
+   Signal <N0> in Unit <LPM_LATCH_2> is assigned to GND
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.09 secs
+ 
+--> 
+
+Total memory usage is 151752 kilobytes
+
+Number of errors   :    1 (   0 filtered)
+Number of warnings :   13 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+
