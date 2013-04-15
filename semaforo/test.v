@@ -55,8 +55,15 @@ module test;
 
 		// Wait 100 ns for global reset to finish
 		#100;
-      #10 rst =1;  
+		
+      #10 rst =1; 
 		#10 rst =0;
+		#250 pulsador=1;
+		#20 pulsador =0;
+		#320 pulsador=1;
+		#20 pulsador =0;
+		
+		
 		// Add stimulus here
 
 	end

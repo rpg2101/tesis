@@ -32,22 +32,20 @@ module semaforo
 	 output  blanco
 );
 	 
-	 
-
 localparam E0  = 0 , E1 = 1 , E2  = 2;
 reg [1:0] estado ;
-reg [1:0] sig_estado ; 
+//reg [1:0] sig_estado ;
+reg regpul; 
 
 reg [3:0] cuenta = 0;
-
-always @ (estado or pulsador)
-begin
-	case (estado)
-		E0 : sig_estado <= E1;
-		E1 : sig_estado <= E2;
-		E2 : sig_estado <= E0;
-	endcase
-end	
+//always @ (estado)
+//begin
+//	case (estado)
+//		E0 : sig_estado <= E1;
+//		E1 : sig_estado <= E2;
+//		E2 : sig_estado <= E0;
+//	endcase
+//end	
 
 
 always @ (posedge clk)
@@ -56,24 +54,41 @@ begin
 	begin
 		estado <= E0;
 		cuenta <= 0;
+		regpul <=0;
 	end
 	
 	else
 	begin
-		if (estado !=  E1  && cuenta ==10) 
-		begin
-			estado <= sig_estado;
-			cuenta <= 0;
-		end
-		else if (estado ==  E1  && cuenta ==3) 
-		begin
-			estado <= sig_estado;
-			cuenta <= 0;
-		end
-		else
-		begin
+		if(pulsador)
+			regpul<=1;
+		if(cuenta < 10)
 			cuenta <= cuenta + 1;
-		end
+		case (estado)
+		E0 : begin 
+				if(regpul && cuenta==10)
+					begin
+					estado <= E1;
+					cuenta <= 0;
+					end
+				end
+		E1 : begin 
+			if( cuenta==3)
+				begin
+				estado <= E2;
+				cuenta <= 0;
+				
+				end
+				end
+		E2 : begin
+				if( cuenta==10)
+				begin
+				estado <= E0;
+				cuenta <= 0;
+				regpul <= 0;
+				end
+				end
+	endcase
+
 	end
 end
 

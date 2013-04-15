@@ -5,7 +5,7 @@ run
 -ifmt mixed
 -ofn multiplicador
 -ofmt NGC
--p xc3s100e-5-cp132
+-p xc3s1600e-5-fg320
 -top multiplicador
 -opt_mode Speed
 -opt_level 1
@@ -42,7 +42,7 @@ run
 -async_to_sync NO
 -mult_style Auto
 -iobuf YES
--max_fanout 500
+-max_fanout 100000
 -bufg 24
 -register_duplication YES
 -register_balancing No

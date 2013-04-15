@@ -1,0 +1,46 @@
+#:C0     
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.28xd
+#Current Working Directory:
+#:D   Z:\multiplicador
+#Date/Time:
+#:T   Mon Apr 15 18:49:05 2013
+#------------------------------
+	#Reading multiplicador.ncd...
+	#Loading device for application Rf_Device from file '3s1600e.nph' in environment C:\Xilinx\14.2\ISE_DS\ISE\.
+	#   "multiplicador" is an NCD, version 3.2, device xc3s1600e, package fg320, speed -5
+	#Design creation date: 2013.04.15.21.48.02
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+select -k comp 'filasmatrizA[0]_columnasmatrizB[0]_interna<0><2>'
+	#3
+unselect -all
+	#4
+select comp 'filasmatrizA[0]_columnasmatrizB[0]_interna<0><2>'
+	#comp "filasmatrizA[0]_columnasmatrizB[0]_interna<0><2>",  site "SLICE_X41Y0",  type = SLICEL  (RPM grid X87Y2)
+	#5
+unselect -all
+	#6
+select comp 'filasmatrizA[0]_columnasmatrizB[0]_interna<0><2>'
+	#comp "filasmatrizA[0]_columnasmatrizB[0]_interna<0><2>",  site "SLICE_X41Y0",  type = SLICEL  (RPM grid X87Y2)
+	#7
+post block
+	#<F>=((~A2*((~A3*(A4*A1))+(A3*(~A4+~A1))))+(A2*A3)); bel <Mmult_filasmatrizA[0].columnasmatrizB[0].interna_0_mult0000_Madd1_xor<2>11>.
+	#<XORF>.
+	#<XORG>.
+	#<FAND>.
+	#<FFX>.
+	#<XORF>.
+	#<XORG>.
+	#<G>=((A4*A1)@A2); bel <Mmult_filasmatrizA[0].columnasmatrizB[0].interna_0_mult0000_Madd1_lut<2>1>.
+	#<G>=((A4*A1)@A2); bel <Mmult_filasmatrizA[0].columnasmatrizB[0].interna_0_mult0000_Madd1_lut<2>1>.
+	#<G>=((A4*A1)@A2); bel <Mmult_filasmatrizA[0].columnasmatrizB[0].interna_0_mult0000_Madd1_lut<2>1>.
+	#<G>=((A4*A1)@A2); bel <Mmult_filasmatrizA[0].columnasmatrizB[0].interna_0_mult0000_Madd1_lut<2>1>.
+	#8
+post exit
+	#9
+exit

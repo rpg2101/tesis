@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2013-04-14T22:06:29</DateModified>
+  <DateModified>2013-04-15T18:29:55</DateModified>
   <ModuleName>semaforo</ModuleName>
-  <SummaryTimeStamp>2013-04-14T22:02:43</SummaryTimeStamp>
+  <SummaryTimeStamp>2013-04-15T18:09:54</SummaryTimeStamp>
   <SavedFilePath>Z:/semaforo/iseconfig/semaforo.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>Z:/semaforo</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>Z:/semaforo\</ImplementationReportsDirectory>
   <DateInitialized>2013-04-14T20:44:13</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

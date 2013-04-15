@@ -3,14 +3,14 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.25 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.23 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.25 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.23 secs
  
 --> Reading design: multiplicador.prj
 
@@ -42,7 +42,7 @@ Ignore Synthesis Constraint File   : NO
 ---- Target Parameters
 Output File Name                   : "multiplicador"
 Output Format                      : NGC
-Target Device                      : xc3s100e-5-cp132
+Target Device                      : xc3s1600e-5-fg320
 
 ---- Source Options
 Top Module Name                    : multiplicador
@@ -68,7 +68,7 @@ Automatic Register Balancing       : No
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 500
+Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 24
 Register Duplication               : YES
 Slice Packing                      : YES
@@ -119,6 +119,7 @@ Analyzing hierarchy for module <multiplicador> in library <work> with parameters
 	M = "00000000000000000000000000000100"
 	N = "00000000000000000000000000000010"
 	P = "00000000000000000000000000000010"
+	log2M = "00000000000000000000000000000010"
 
 
 =========================================================================
@@ -130,6 +131,7 @@ Analyzing top module <multiplicador>.
 	M = 32'sb00000000000000000000000000000100
 	N = 32'sb00000000000000000000000000000010
 	P = 32'sb00000000000000000000000000000010
+	log2M = 32'sb00000000000000000000000000000010
 Module <multiplicador> is correct for synthesis.
  
 
@@ -141,27 +143,31 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <multiplicador>.
     Related source file is "multiplicador.v".
-    Found 3x3-bit multiplier for signal <filasmatrizA[0].columnasmatrizB[0].interna_0$mult0000> created at line 49.
-    Found 3x3-bit multiplier for signal <filasmatrizA[0].columnasmatrizB[0].interna_1$mult0000> created at line 49.
-    Found 3x3-bit multiplier for signal <filasmatrizA[0].columnasmatrizB[0].interna_2$mult0000> created at line 49.
-    Found 3x3-bit multiplier for signal <filasmatrizA[0].columnasmatrizB[0].interna_3$mult0000> created at line 49.
+    Found 32-bit register for signal <out>.
+    Found 3x3-bit multiplier for signal <filasmatrizA[0].columnasmatrizB[0].interna_0$mult0000> created at line 62.
+    Found 3x3-bit multiplier for signal <filasmatrizA[0].columnasmatrizB[0].interna_1$mult0000> created at line 62.
+    Found 3x3-bit multiplier for signal <filasmatrizA[0].columnasmatrizB[0].interna_2$mult0000> created at line 62.
+    Found 3x3-bit multiplier for signal <filasmatrizA[0].columnasmatrizB[0].interna_3$mult0000> created at line 62.
     Found 8-bit adder for signal <filasmatrizA[0].columnasmatrizB[0].sumainterna<3:1>>.
-    Found 3x3-bit multiplier for signal <filasmatrizA[0].columnasmatrizB[1].interna_0$mult0000> created at line 49.
-    Found 3x3-bit multiplier for signal <filasmatrizA[0].columnasmatrizB[1].interna_1$mult0000> created at line 49.
-    Found 3x3-bit multiplier for signal <filasmatrizA[0].columnasmatrizB[1].interna_2$mult0000> created at line 49.
-    Found 3x3-bit multiplier for signal <filasmatrizA[0].columnasmatrizB[1].interna_3$mult0000> created at line 49.
+    Found 3x3-bit multiplier for signal <filasmatrizA[0].columnasmatrizB[1].interna_0$mult0000> created at line 62.
+    Found 3x3-bit multiplier for signal <filasmatrizA[0].columnasmatrizB[1].interna_1$mult0000> created at line 62.
+    Found 3x3-bit multiplier for signal <filasmatrizA[0].columnasmatrizB[1].interna_2$mult0000> created at line 62.
+    Found 3x3-bit multiplier for signal <filasmatrizA[0].columnasmatrizB[1].interna_3$mult0000> created at line 62.
     Found 8-bit adder for signal <filasmatrizA[0].columnasmatrizB[1].sumainterna<3:1>>.
-    Found 3x3-bit multiplier for signal <filasmatrizA[1].columnasmatrizB[0].interna_0$mult0000> created at line 49.
-    Found 3x3-bit multiplier for signal <filasmatrizA[1].columnasmatrizB[0].interna_1$mult0000> created at line 49.
-    Found 3x3-bit multiplier for signal <filasmatrizA[1].columnasmatrizB[0].interna_2$mult0000> created at line 49.
-    Found 3x3-bit multiplier for signal <filasmatrizA[1].columnasmatrizB[0].interna_3$mult0000> created at line 49.
+    Found 3x3-bit multiplier for signal <filasmatrizA[1].columnasmatrizB[0].interna_0$mult0000> created at line 62.
+    Found 3x3-bit multiplier for signal <filasmatrizA[1].columnasmatrizB[0].interna_1$mult0000> created at line 62.
+    Found 3x3-bit multiplier for signal <filasmatrizA[1].columnasmatrizB[0].interna_2$mult0000> created at line 62.
+    Found 3x3-bit multiplier for signal <filasmatrizA[1].columnasmatrizB[0].interna_3$mult0000> created at line 62.
     Found 8-bit adder for signal <filasmatrizA[1].columnasmatrizB[0].sumainterna<3:1>>.
-    Found 3x3-bit multiplier for signal <filasmatrizA[1].columnasmatrizB[1].interna_0$mult0000> created at line 49.
-    Found 3x3-bit multiplier for signal <filasmatrizA[1].columnasmatrizB[1].interna_1$mult0000> created at line 49.
-    Found 3x3-bit multiplier for signal <filasmatrizA[1].columnasmatrizB[1].interna_2$mult0000> created at line 49.
-    Found 3x3-bit multiplier for signal <filasmatrizA[1].columnasmatrizB[1].interna_3$mult0000> created at line 49.
+    Found 3x3-bit multiplier for signal <filasmatrizA[1].columnasmatrizB[1].interna_0$mult0000> created at line 62.
+    Found 3x3-bit multiplier for signal <filasmatrizA[1].columnasmatrizB[1].interna_1$mult0000> created at line 62.
+    Found 3x3-bit multiplier for signal <filasmatrizA[1].columnasmatrizB[1].interna_2$mult0000> created at line 62.
+    Found 3x3-bit multiplier for signal <filasmatrizA[1].columnasmatrizB[1].interna_3$mult0000> created at line 62.
     Found 8-bit adder for signal <filasmatrizA[1].columnasmatrizB[1].sumainterna<3:1>>.
+    Found 24-bit register for signal <in1>.
+    Found 24-bit register for signal <in2>.
     Summary:
+	inferred  80 D-type flip-flop(s).
 	inferred  12 Adder/Subtractor(s).
 	inferred  16 Multiplier(s).
 Unit <multiplicador> synthesized.
@@ -175,6 +181,9 @@ Macro Statistics
  3x3-bit multiplier                                    : 16
 # Adders/Subtractors                                   : 12
  8-bit adder                                           : 12
+# Registers                                            : 3
+ 24-bit register                                       : 2
+ 32-bit register                                       : 1
 
 =========================================================================
 
@@ -183,14 +192,131 @@ Macro Statistics
 =========================================================================
 
 
+Synthesizing (advanced) Unit <multiplicador>.
+	Found pipelined multiplier on signal <filasmatrizA[0]_columnasmatrizB[0]_interna<0>>:
+		- 1 pipeline level(s) found in a register on signal <in1>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <in2>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <filasmatrizA[0]_columnasmatrizB[0]_interna<1>>:
+		- 1 pipeline level(s) found in a register on signal <in1>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <in2>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <filasmatrizA[0]_columnasmatrizB[0]_interna<2>>:
+		- 1 pipeline level(s) found in a register on signal <in1>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <in2<>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <filasmatrizA[0]_columnasmatrizB[0]_interna<3>>:
+		- 1 pipeline level(s) found in a register on signal <in1>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <in2<>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <filasmatrizA[0]_columnasmatrizB[1]_interna<0>>:
+		- 1 pipeline level(s) found in a register on signal <in1>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <in2>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <filasmatrizA[0]_columnasmatrizB[1]_interna<1>>:
+		- 1 pipeline level(s) found in a register on signal <in1>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <in2>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <filasmatrizA[0]_columnasmatrizB[1]_interna<2>>:
+		- 1 pipeline level(s) found in a register on signal <in1>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <in2<>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <filasmatrizA[0]_columnasmatrizB[1]_interna<3>>:
+		- 1 pipeline level(s) found in a register on signal <in1>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <in2<>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <filasmatrizA[1]_columnasmatrizB[0]_interna<0>>:
+		- 1 pipeline level(s) found in a register on signal <in1<>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <in2>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <filasmatrizA[1]_columnasmatrizB[0]_interna<1>>:
+		- 1 pipeline level(s) found in a register on signal <in1<>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <in2>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <filasmatrizA[1]_columnasmatrizB[0]_interna<2>>:
+		- 1 pipeline level(s) found in a register on signal <in1<>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <in2<>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <filasmatrizA[1]_columnasmatrizB[0]_interna<3>>:
+		- 1 pipeline level(s) found in a register on signal <in1<>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <in2<>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <filasmatrizA[1]_columnasmatrizB[1]_interna<0>>:
+		- 1 pipeline level(s) found in a register on signal <in1<>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <in2>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <filasmatrizA[1]_columnasmatrizB[1]_interna<2>>:
+		- 1 pipeline level(s) found in a register on signal <in1<>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <in2<>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <filasmatrizA[1]_columnasmatrizB[1]_interna<1>>:
+		- 1 pipeline level(s) found in a register on signal <in1<>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <in2>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <filasmatrizA[1]_columnasmatrizB[1]_interna<3>>:
+		- 1 pipeline level(s) found in a register on signal <in1<>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <in2<>.
+		Pushing register(s) into the multiplier macro.
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_filasmatrizA[0].columnasmatrizB[0].interna_0_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_filasmatrizA[0].columnasmatrizB[0].interna_1_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_filasmatrizA[0].columnasmatrizB[0].interna_2_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_filasmatrizA[0].columnasmatrizB[0].interna_3_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_filasmatrizA[0].columnasmatrizB[1].interna_0_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_filasmatrizA[0].columnasmatrizB[1].interna_1_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_filasmatrizA[0].columnasmatrizB[1].interna_2_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_filasmatrizA[0].columnasmatrizB[1].interna_3_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_filasmatrizA[1].columnasmatrizB[0].interna_0_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_filasmatrizA[1].columnasmatrizB[0].interna_1_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_filasmatrizA[1].columnasmatrizB[0].interna_2_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_filasmatrizA[1].columnasmatrizB[0].interna_3_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_filasmatrizA[1].columnasmatrizB[1].interna_0_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_filasmatrizA[1].columnasmatrizB[1].interna_2_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_filasmatrizA[1].columnasmatrizB[1].interna_1_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_filasmatrizA[1].columnasmatrizB[1].interna_3_mult0000 by adding 1 register level(s).
+Unit <multiplicador> synthesized (advanced).
+
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
 # Multipliers                                          : 16
- 3x3-bit multiplier                                    : 16
+ 3x3-bit registered multiplier                         : 16
 # Adders/Subtractors                                   : 12
  8-bit adder                                           : 12
+# Registers                                            : 32
+ Flip-Flops                                            : 32
 
 =========================================================================
 
@@ -202,14 +328,17 @@ Optimizing unit <multiplicador> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block multiplicador, actual ratio is 19.
+Found area constraint ratio of 100 (+ 5) on block multiplicador, actual ratio is 0.
 
 Final Macro Processing ...
 
 =========================================================================
 Final Register Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 32
+ Flip-Flops                                            : 32
+
 =========================================================================
 
 =========================================================================
@@ -234,33 +363,41 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 80
+# IOs                              : 81
 
 Cell Usage :
-# BELS                             : 445
+# BELS                             : 190
 #      GND                         : 1
 #      LUT1                        : 4
-#      LUT2                        : 38
-#      LUT3                        : 44
-#      LUT4                        : 206
-#      MULT_AND                    : 4
+#      LUT2                        : 28
+#      LUT3                        : 24
+#      LUT4                        : 16
 #      MUXCY                       : 56
-#      MUXF5                       : 32
+#      VCC                         : 1
 #      XORCY                       : 60
+# FlipFlops/Latches                : 32
+#      FD                          : 32
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
 # IO Buffers                       : 80
 #      IBUF                        : 48
 #      OBUF                        : 32
+# MULTs                            : 16
+#      MULT18X18SIO                : 16
 =========================================================================
 
 Device utilization summary:
 ---------------------------
 
-Selected Device : 3s100ecp132-5 
+Selected Device : 3s1600efg320-5 
 
- Number of Slices:                      163  out of    960    16%  
- Number of 4 input LUTs:                292  out of   1920    15%  
- Number of IOs:                          80
- Number of bonded IOBs:                  80  out of     83    96%  
+ Number of Slices:                       41  out of  14752     0%  
+ Number of Slice Flip Flops:             32  out of  29504     0%  
+ Number of 4 input LUTs:                 72  out of  29504     0%  
+ Number of IOs:                          81
+ Number of bonded IOBs:                  81  out of    250    32%  
+ Number of MULT18X18SIOs:                16  out of     36    44%  
+ Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
 Partition Resource Summary:
@@ -280,7 +417,11 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-No clock signals found in this design
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 48    |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -290,55 +431,95 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: No path found
-   Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: No path found
-   Maximum combinational path delay: 15.102ns
+   Minimum period: 9.347ns (Maximum Frequency: 106.981MHz)
+   Minimum input arrival time before clock: 1.827ns
+   Maximum output required time after clock: 4.040ns
+   Maximum combinational path delay: No path found
 
 Timing Detail:
 --------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 43372 / 32
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 9.347ns (frequency: 106.981MHz)
+  Total number of paths / destination ports: 2812 / 32
 -------------------------------------------------------------------------
-Delay:               15.102ns (Levels of Logic = 13)
-  Source:            in2<19> (PAD)
-  Destination:       out<31> (PAD)
+Delay:               9.347ns (Levels of Logic = 10)
+  Source:            Mmult_filasmatrizA[0].columnasmatrizB[0].interna_1_mult0000 (MULT)
+  Destination:       out_7 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
 
-  Data Path: in2<19> to out<31>
+  Data Path: Mmult_filasmatrizA[0].columnasmatrizB[0].interna_1_mult0000 to out_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            14   1.106   1.002  in2_19_IBUF (in2_19_IBUF)
-     LUT4:I0->O            2   0.612   0.532  Mmult_filasmatrizA[1].columnasmatrizB[1].interna_2_mult0000_Madd_lut<2>1 (Mmult_filasmatrizA[1].columnasmatrizB[1].interna_2_mult0000_Madd_2)
-     LUT4:I0->O            3   0.612   0.520  Mmult_filasmatrizA[1].columnasmatrizB[1].interna_2_mult0000_Madd1_cy<2>1 (Mmult_filasmatrizA[1].columnasmatrizB[1].interna_2_mult0000_Madd1_cy<2>)
-     LUT4:I1->O            3   0.612   0.520  Mmult_filasmatrizA[1].columnasmatrizB[1].interna_2_mult0000_Madd1_cy<3>11 (Mmult_filasmatrizA[1].columnasmatrizB[1].interna_2_mult0000_Madd1_cy<3>)
-     LUT2:I1->O            1   0.612   0.387  Mmult_filasmatrizA[1].columnasmatrizB[1].interna_2_mult0000_Madd1_xor<4>11 (filasmatrizA[1]_columnasmatrizB[1]_interna<2><4>)
-     LUT4:I2->O            1   0.612   0.509  Madd_filasmatrizA[1].columnasmatrizB[1].sumainterna<2>C31 (Madd_filasmatrizA[1].columnasmatrizB[1].sumainterna<2>C3)
-     LUT4:I0->O            1   0.612   0.000  Madd_filasmatrizA[1].columnasmatrizB[1].sumainterna<2>_Madd_lut<5> (Madd_filasmatrizA[1].columnasmatrizB[1].sumainterna<2>_Madd_lut<5>)
-     MUXCY:S->O            1   0.404   0.000  Madd_filasmatrizA[1].columnasmatrizB[1].sumainterna<2>_Madd_cy<5> (Madd_filasmatrizA[1].columnasmatrizB[1].sumainterna<2>_Madd_cy<5>)
-     XORCY:CI->O           1   0.699   0.509  Madd_filasmatrizA[1].columnasmatrizB[1].sumainterna<2>_Madd_xor<6> (filasmatrizA[1]_columnasmatrizB[1]_sumainterna<2><6>)
-     LUT1:I0->O            1   0.612   0.000  Madd_filasmatrizA[1].columnasmatrizB[1].sumainterna<3>_cy<6>_rt (Madd_filasmatrizA[1].columnasmatrizB[1].sumainterna<3>_cy<6>_rt)
-     MUXCY:S->O            0   0.404   0.000  Madd_filasmatrizA[1].columnasmatrizB[1].sumainterna<3>_cy<6> (Madd_filasmatrizA[1].columnasmatrizB[1].sumainterna<3>_cy<6>)
-     XORCY:CI->O           1   0.699   0.357  Madd_filasmatrizA[1].columnasmatrizB[1].sumainterna<3>_xor<7> (out_31_OBUF)
+     MULT18X18SIO:CLK->P1    2   3.482   0.532  Mmult_filasmatrizA[0].columnasmatrizB[0].interna_1_mult0000 (filasmatrizA[0]_columnasmatrizB[0]_interna<1><1>)
+     LUT3:I0->O            1   0.612   0.360  Madd_filasmatrizA[0].columnasmatrizB[0].sumainterna<2>C1 (Madd_filasmatrizA[0].columnasmatrizB[0].sumainterna<2>C)
+     LUT4:I3->O            1   0.612   0.000  Madd_filasmatrizA[0].columnasmatrizB[0].sumainterna<2>_Madd_lut<2> (Madd_filasmatrizA[0].columnasmatrizB[0].sumainterna<2>_Madd_lut<2>)
+     MUXCY:S->O            1   0.404   0.000  Madd_filasmatrizA[0].columnasmatrizB[0].sumainterna<2>_Madd_cy<2> (Madd_filasmatrizA[0].columnasmatrizB[0].sumainterna<2>_Madd_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  Madd_filasmatrizA[0].columnasmatrizB[0].sumainterna<2>_Madd_cy<3> (Madd_filasmatrizA[0].columnasmatrizB[0].sumainterna<2>_Madd_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  Madd_filasmatrizA[0].columnasmatrizB[0].sumainterna<2>_Madd_cy<4> (Madd_filasmatrizA[0].columnasmatrizB[0].sumainterna<2>_Madd_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  Madd_filasmatrizA[0].columnasmatrizB[0].sumainterna<2>_Madd_cy<5> (Madd_filasmatrizA[0].columnasmatrizB[0].sumainterna<2>_Madd_cy<5>)
+     XORCY:CI->O           1   0.699   0.509  Madd_filasmatrizA[0].columnasmatrizB[0].sumainterna<2>_Madd_xor<6> (filasmatrizA[0]_columnasmatrizB[0]_sumainterna<2><6>)
+     LUT1:I0->O            1   0.612   0.000  Madd_filasmatrizA[0].columnasmatrizB[0].sumainterna<3>_cy<6>_rt (Madd_filasmatrizA[0].columnasmatrizB[0].sumainterna<3>_cy<6>_rt)
+     MUXCY:S->O            0   0.404   0.000  Madd_filasmatrizA[0].columnasmatrizB[0].sumainterna<3>_cy<6> (Madd_filasmatrizA[0].columnasmatrizB[0].sumainterna<3>_cy<6>)
+     XORCY:CI->O           1   0.699   0.000  Madd_filasmatrizA[0].columnasmatrizB[0].sumainterna<3>_xor<7> (filasmatrizA[0]_columnasmatrizB[0]_sumainterna<3><7>)
+     FD:D                      0.268          out_7
+    ----------------------------------------
+    Total                      9.347ns (7.946ns logic, 1.401ns route)
+                                       (85.0% logic, 15.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 96 / 96
+-------------------------------------------------------------------------
+Offset:              1.827ns (Levels of Logic = 1)
+  Source:            in2w<8> (PAD)
+  Destination:       Mmult_filasmatrizA[0].columnasmatrizB[0].interna_1_mult0000 (MULT)
+  Destination Clock: clk rising
+
+  Data Path: in2w<8> to Mmult_filasmatrizA[0].columnasmatrizB[0].interna_1_mult0000
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.106   0.380  in2w_8_IBUF (in2w_8_IBUF)
+     MULT18X18SIO:B2           0.341          Mmult_filasmatrizA[0].columnasmatrizB[0].interna_1_mult0000
+    ----------------------------------------
+    Total                      1.827ns (1.447ns logic, 0.380ns route)
+                                       (79.2% logic, 20.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Offset:              4.040ns (Levels of Logic = 1)
+  Source:            out_31 (FF)
+  Destination:       out<31> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: out_31 to out<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.514   0.357  out_31 (out_31)
      OBUF:I->O                 3.169          out_31_OBUF (out<31>)
     ----------------------------------------
-    Total                     15.102ns (10.765ns logic, 4.337ns route)
-                                       (71.3% logic, 28.7% route)
+    Total                      4.040ns (3.683ns logic, 0.357ns route)
+                                       (91.2% logic, 8.8% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.70 secs
+Total CPU time to Xst completion: 6.27 secs
  
 --> 
 
-Total memory usage is 155848 kilobytes
+Total memory usage is 163016 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of infos    :   16 (   0 filtered)
 

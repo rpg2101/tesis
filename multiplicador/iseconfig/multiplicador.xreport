@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2013-04-13T19:47:35</DateModified>
+  <DateModified>2013-04-15T20:04:16</DateModified>
   <ModuleName>multiplicador</ModuleName>
-  <SummaryTimeStamp>2013-04-13T19:32:21</SummaryTimeStamp>
+  <SummaryTimeStamp>2013-04-15T19:31:58</SummaryTimeStamp>
   <SavedFilePath>Z:/multiplicador/iseconfig/multiplicador.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>Z:/multiplicador</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>Z:/multiplicador\</ImplementationReportsDirectory>
   <DateInitialized>2013-04-13T19:30:17</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
