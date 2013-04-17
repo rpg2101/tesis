@@ -48,6 +48,9 @@ module test;
    always 
 		#10 clk = ~clk;
 	initial begin
+  $dumpfile ("test.vcd");
+  $dumpvars (1, test);
+  //$monitor ("clk=%b, rst=%b, pulsador=%b", clk, rst, pulsador);
 		// Initialize Inputs
 		pulsador = 0;
 		clk = 0;
@@ -58,7 +61,7 @@ module test;
       #10 rst =1;  
 		#10 rst =0;
 		// Add stimulus here
-
+  #2000 $finish;
 	end
       
 endmodule
