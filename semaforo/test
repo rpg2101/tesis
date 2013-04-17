@@ -1,0 +1,173 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.6 " "(v0_9_6)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x8f1aa58 .scope module, "test" "test" 2 25;
+ .timescale -9 -12;
+v0x8f58750_0 .net "amarillo", 0 0, L_0x8f58d20; 1 drivers
+v0x8f587a0_0 .net "blanco", 0 0, L_0x8f59118; 1 drivers
+v0x8f587f0_0 .var "clk", 0 0;
+v0x8f58860_0 .var "pulsador", 0 0;
+v0x8f588d0_0 .net "rojo", 0 0, L_0x8f58ef0; 1 drivers
+v0x8f58940_0 .var "rst", 0 0;
+v0x8f589d0_0 .net "verde", 0 0, L_0x8f58b18; 1 drivers
+S_0x8f1a410 .scope module, "uut" "semaforo" 2 39, 3 20, S_0x8f1aa58;
+ .timescale -9 -12;
+P_0x8f19d94 .param/l "E0" 3 37, +C4<0>;
+P_0x8f19da8 .param/l "E1" 3 37, +C4<01>;
+P_0x8f19dbc .param/l "E2" 3 37, +C4<010>;
+P_0x8f19dd0 .param/l "t_corto" 3 23, +C4<011>;
+P_0x8f19de4 .param/l "t_largo" 3 22, +C4<01010>;
+v0x8f3d738_0 .net *"_s0", 2 0, L_0x8f58a40; 1 drivers
+v0x8f57dc8_0 .net *"_s11", 0 0, C4<0>; 1 drivers
+v0x8f57e28_0 .net *"_s12", 2 0, C4<001>; 1 drivers
+v0x8f57e88_0 .net *"_s16", 3 0, L_0x8f58e18; 1 drivers
+v0x8f57ef0_0 .net *"_s19", 1 0, C4<00>; 1 drivers
+v0x8f57f50_0 .net *"_s20", 3 0, C4<0010>; 1 drivers
+v0x8f57fd0_0 .net *"_s24", 3 0, L_0x8f58fe8; 1 drivers
+v0x8f58030_0 .net *"_s27", 1 0, C4<00>; 1 drivers
+v0x8f580b8_0 .net *"_s28", 3 0, C4<0010>; 1 drivers
+v0x8f58118_0 .net *"_s3", 0 0, C4<0>; 1 drivers
+v0x8f581a8_0 .net *"_s4", 2 0, C4<000>; 1 drivers
+v0x8f58208_0 .net *"_s8", 2 0, L_0x8f58c10; 1 drivers
+v0x8f582a0_0 .alias "amarillo", 0 0, v0x8f58750_0;
+v0x8f58300_0 .alias "blanco", 0 0, v0x8f587a0_0;
+v0x8f583a0_0 .net "clk", 0 0, v0x8f587f0_0; 1 drivers
+v0x8f58400_0 .var "cuenta", 3 0;
+v0x8f584a8_0 .var "estado", 1 0;
+v0x8f58508_0 .net "pulsador", 0 0, v0x8f58860_0; 1 drivers
+v0x8f585a8_0 .alias "rojo", 0 0, v0x8f588d0_0;
+v0x8f585f8_0 .net "rst", 0 0, v0x8f58940_0; 1 drivers
+v0x8f58558_0 .var "sig_estado", 1 0;
+v0x8f586a0_0 .alias "verde", 0 0, v0x8f589d0_0;
+E_0x8f197e8 .event posedge, v0x8f583a0_0;
+E_0x8f3c458 .event edge, v0x8f58508_0, v0x8f584a8_0;
+L_0x8f58a40 .concat [ 2 1 0 0], v0x8f584a8_0, C4<0>;
+L_0x8f58b18 .cmp/eq 3, L_0x8f58a40, C4<000>;
+L_0x8f58c10 .concat [ 2 1 0 0], v0x8f584a8_0, C4<0>;
+L_0x8f58d20 .cmp/eq 3, L_0x8f58c10, C4<001>;
+L_0x8f58e18 .concat [ 2 2 0 0], v0x8f584a8_0, C4<00>;
+L_0x8f58ef0 .cmp/eq 4, L_0x8f58e18, C4<0010>;
+L_0x8f58fe8 .concat [ 2 2 0 0], v0x8f584a8_0, C4<00>;
+L_0x8f59118 .cmp/eq 4, L_0x8f58fe8, C4<0010>;
+    .scope S_0x8f1a410;
+T_0 ;
+    %set/v v0x8f58400_0, 0, 4;
+    %end;
+    .thread T_0;
+    .scope S_0x8f1a410;
+T_1 ;
+    %wait E_0x8f3c458;
+    %load/v 8, v0x8f584a8_0, 2;
+    %cmpi/u 8, 0, 2;
+    %jmp/1 T_1.0, 6;
+    %cmpi/u 8, 1, 2;
+    %jmp/1 T_1.1, 6;
+    %cmpi/u 8, 2, 2;
+    %jmp/1 T_1.2, 6;
+    %jmp T_1.3;
+T_1.0 ;
+    %movi 8, 1, 2;
+    %ix/load 0, 2, 0;
+    %assign/v0 v0x8f58558_0, 0, 8;
+    %jmp T_1.3;
+T_1.1 ;
+    %movi 8, 2, 3;
+    %ix/load 0, 2, 0;
+    %assign/v0 v0x8f58558_0, 0, 8;
+    %jmp T_1.3;
+T_1.2 ;
+    %ix/load 0, 2, 0;
+    %assign/v0 v0x8f58558_0, 0, 0;
+    %jmp T_1.3;
+T_1.3 ;
+    %jmp T_1;
+    .thread T_1, $push;
+    .scope S_0x8f1a410;
+T_2 ;
+    %wait E_0x8f197e8;
+    %load/v 8, v0x8f585f8_0, 1;
+    %jmp/0xz  T_2.0, 8;
+    %ix/load 0, 2, 0;
+    %assign/v0 v0x8f584a8_0, 0, 0;
+    %ix/load 0, 4, 0;
+    %assign/v0 v0x8f58400_0, 0, 0;
+    %jmp T_2.1;
+T_2.0 ;
+    %load/v 8, v0x8f584a8_0, 2;
+    %mov 10, 0, 1;
+    %cmpi/u 8, 1, 3;
+    %inv 4, 1;
+    %mov 8, 4, 1;
+    %load/v 9, v0x8f58400_0, 4;
+    %mov 13, 0, 2;
+    %cmpi/u 9, 10, 6;
+    %mov 9, 4, 1;
+    %and 8, 9, 1;
+    %jmp/0xz  T_2.2, 8;
+    %load/v 8, v0x8f58558_0, 2;
+    %ix/load 0, 2, 0;
+    %assign/v0 v0x8f584a8_0, 0, 8;
+    %ix/load 0, 4, 0;
+    %assign/v0 v0x8f58400_0, 0, 0;
+    %jmp T_2.3;
+T_2.2 ;
+    %load/v 8, v0x8f584a8_0, 2;
+    %mov 10, 0, 1;
+    %cmpi/u 8, 1, 3;
+    %mov 8, 4, 1;
+    %load/v 9, v0x8f58400_0, 4;
+    %mov 13, 0, 1;
+    %cmpi/u 9, 3, 5;
+    %mov 9, 4, 1;
+    %and 8, 9, 1;
+    %jmp/0xz  T_2.4, 8;
+    %load/v 8, v0x8f58558_0, 2;
+    %ix/load 0, 2, 0;
+    %assign/v0 v0x8f584a8_0, 0, 8;
+    %ix/load 0, 4, 0;
+    %assign/v0 v0x8f58400_0, 0, 0;
+    %jmp T_2.5;
+T_2.4 ;
+    %load/v 8, v0x8f58400_0, 4;
+    %mov 12, 0, 28;
+    %addi 8, 1, 32;
+    %ix/load 0, 4, 0;
+    %assign/v0 v0x8f58400_0, 0, 8;
+T_2.5 ;
+T_2.3 ;
+T_2.1 ;
+    %jmp T_2;
+    .thread T_2;
+    .scope S_0x8f1aa58;
+T_3 ;
+    %delay 10000, 0;
+    %load/v 8, v0x8f587f0_0, 1;
+    %inv 8, 1;
+    %set/v v0x8f587f0_0, 8, 1;
+    %jmp T_3;
+    .thread T_3;
+    .scope S_0x8f1aa58;
+T_4 ;
+    %vpi_call 2 51 "$dumpfile", "test.vcd";
+    %vpi_call 2 52 "$dumpvars", 2'sb01, S_0x8f1aa58;
+    %set/v v0x8f58860_0, 0, 1;
+    %set/v v0x8f587f0_0, 0, 1;
+    %set/v v0x8f58940_0, 0, 1;
+    %delay 100000, 0;
+    %delay 10000, 0;
+    %set/v v0x8f58940_0, 1, 1;
+    %delay 10000, 0;
+    %set/v v0x8f58940_0, 0, 1;
+    %delay 2000000, 0;
+    %vpi_call 2 64 "$finish";
+    %end;
+    .thread T_4;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "test.v";
+    "semaforo.v";
