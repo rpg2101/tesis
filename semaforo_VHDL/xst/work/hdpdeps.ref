@@ -1,0 +1,6 @@
+V3 3
+FL //vboxsvr/tesis/semaforo_VHDL/semaforo.vhd 2013/04/23.21:58:09 P.28xd
+EN work/semaforo 1366765096 FL //vboxsvr/tesis/semaforo_VHDL/semaforo.vhd \
+      PB ieee/std_logic_1164 1341906176 PB ieee/STD_LOGIC_UNSIGNED 1341906179
+AR work/semaforo/Behavioral 1366765097 \
+      FL //vboxsvr/tesis/semaforo_VHDL/semaforo.vhd EN work/semaforo 1366765096

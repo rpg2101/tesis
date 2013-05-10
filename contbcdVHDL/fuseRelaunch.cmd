@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Documents and Settings/contbcdVHDL/testbcd_isim_beh.exe" -prj "C:/Documents and Settings/contbcdVHDL/testbcd_beh.prj" "work.testbcd" 

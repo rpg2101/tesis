@@ -1,0 +1,8 @@
+V3 4
+FL "C:/Documents and Settings/contbcdVHDL/ifcontBCD.vhd" 2013/04/22.22:14:49 P.28xd
+EN work/ifcontBCD 1366679693 \
+      FL "C:/Documents and Settings/contbcdVHDL/ifcontBCD.vhd" \
+      PB ieee/std_logic_1164 1341906176 PB ieee/STD_LOGIC_UNSIGNED 1341906179
+AR work/ifcontBCD/Behavioral 1366679694 \
+      FL "C:/Documents and Settings/contbcdVHDL/ifcontBCD.vhd" EN work/ifcontBCD 1366679693 \
+      CP contador_BCD

@@ -1,0 +1,13 @@
+NET "clk" LOC = "B8";
+NET "rst" LOC = "B18";
+NET "salida<0>" LOC = "L18";
+NET "salida<1>" LOC = "F18";
+NET "salida<2>" LOC = "D17";
+NET "salida<3>" LOC = "D16";
+NET "salida<4>" LOC = "G14";
+NET "salida<5>" LOC = "J17";
+NET "salida<6>" LOC = "H14";
+NET "drivers<0>" LOC = "F17";
+NET "drivers<1>" LOC = "H17";
+NET "drivers<2>" LOC = "C18";
+NET "drivers<3>" LOC = "F15";

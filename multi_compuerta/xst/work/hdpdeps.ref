@@ -1,0 +1,8 @@
+V3 3
+FL "C:/Documents and Settings/multi_compuerta/multi_compuerta.vhd" 2013/04/16.19:28:08 P.28xd
+EN work/multi_compuerta 1366408583 \
+      FL "C:/Documents and Settings/multi_compuerta/multi_compuerta.vhd" \
+      PB ieee/std_logic_1164 1341906176
+AR work/multi_compuerta/Behavioral 1366408584 \
+      FL "C:/Documents and Settings/multi_compuerta/multi_compuerta.vhd" \
+      EN work/multi_compuerta 1366408583

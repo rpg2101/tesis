@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "Z:/multiplicador_matriz_serial_vhdl/test_isim_beh.exe" -prj "Z:/multiplicador_matriz_serial_vhdl/test_beh.prj" "work.test" 

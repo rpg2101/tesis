@@ -1,0 +1,2 @@
+verilog work "contador_BCD.v"
+vhdl work "ifcontBCD.vhd"

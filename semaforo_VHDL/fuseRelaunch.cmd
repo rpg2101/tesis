@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "Z:/semaforo_VHDL/test_isim_beh.exe" -prj "Z:/semaforo_VHDL/test_beh.prj" "work.test" 

@@ -1,0 +1,23 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -o "Z:/multiplicador_matriz_serial_vhdl/test_isim_beh.exe" -prj "Z:/multiplicador_matriz_serial_vhdl/test_beh.prj" "work.test" 
+ISim P.28xd (signature 0x1048c146)
+Number of CPUs detected in this system: 1
+Turning on mult-threading, number of parallel sub-compilation jobs: 0 
+Determining compilation order of HDL files
+Parsing VHDL file "Z:/multiplicador_matriz_serial_vhdl/mult.vhd" into library work
+Parsing VHDL file "Z:/multiplicador_matriz_serial_vhdl/test.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 90996 KB
+Fuse CPU Usage: 380 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package numeric_std
+Compiling architecture behavioral of entity mult [\mult(2,2,2,2,1,1,1,5)\]
+Compiling architecture behavior of entity test
+Time Resolution for simulation is 1ps.
+Compiled 8 VHDL Units
+Built simulation executable Z:/multiplicador_matriz_serial_vhdl/test_isim_beh.exe
+Fuse Memory Usage: 108728 KB
+Fuse CPU Usage: 640 ms
