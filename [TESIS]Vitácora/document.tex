@@ -1,0 +1,86 @@
+%%This is a very basic article template.
+%%There is just one section and two subsections.
+\documentclass[12pt,a4paper]{article}
+\usepackage [spanish] {babel} 
+\usepackage [T1]{fontenc}
+%%\usepackage [latin1]{inputenc}
+\usepackage [utf8] {inputenc}
+\usepackage{color}
+
+\begin{document}
+
+\section{Actividades Realizadas}
+\subsection{Descripción}
+
+\begin{enumerate}
+  \item 16/04/2013 : Capacitación Verilog.
+  \item 22/04/2013 : Capacitación Verilog.
+  \item 23/04/2013 : Capacitación Verilog - VHDL Capacitación VHDL , Pruebas
+  sobre la placa Nexys 2 de Xilinx.
+  \item 29/04/2013 : Capacitación VHDL , Pruebas sobre la placa Nexys 2 de
+  Xilinx.
+  \item 30/04/2013 : Final módulo multiplicador de matrices Serial VHDL
+  \item 06/05/2013 : Inicio de actividades referentes al proyector MinSoC,
+  descarga del fuente, instalación de herramientas toolchain, síntesis del RTL.
+  \item 07/05/2013 : Continuan las actividades sobre el proyecto MinSoC.
+  \item 13/05/2013 : Se logra sintetizar el código RTL para la placa Xilinx DSP
+  1800A.
+  \item 17/05/2013 : Se corre por primera vez el proyecto MinSoC en la placa
+  Xilinx DSP 1800A con su programa de prueba del puerto uart.
+  \item 20/05/2013 : Se prueba software multiplicador de matrices desarrollado
+  en C , compilado para OpenRISC.
+  \item 27/05/2013 : Se trabaja sobre el modulo ticktimer del procesador
+  OpenRISC para poder medir el tiempo de ejecución de los programas corridos en
+  el plataforma.
+  \item 03/06/2013 : Se logra acceder a los registros del TT y medir la
+  cantidad de clocks durante la ejecución del soft multiplicador de matrices. Se
+  utiliza gdb para debugger el software y desensamblarlo para verficar la
+  cantidad de instrucciones necesarias para reiniciar el TT , ponerlo en marcha
+  y leer el resultado.
+  \item 10/06/2013 : Configuración de herramientas en entorno Windows con
+  cygwin.
+  \item 11/06/2013 : Configuración de herramientas en entorno Windows,
+  configuración de drivers , plataforma Xilinx , etc.
+  \item 15/06/2013 : Documentacion de actividades. Lectura Wishbone CAP 1
+  \item 16/06/2013 : Lecturas Bus Wishbone CAP 2 , CAP 3
+  \item 17/06/2013 : Pruebas compilación toolchain minSoC en cygwin windows (NO
+  WAY). Descarga de source del toolchain de ORPSoC para compilar en linux.
+  \item 18/06/2013 : Pruebas ORPSOC.
+  \item 24/06/2013 : Compilación Kernel Linux para OR , Prueba simulación
+  orksim.
+  \item 25/06/2013 : Pruebas simulación orksim para ORPSOC. Reelevamiento de
+  Debugger debug-proxy.OOCDLink.
+  \item 20/08/2013 : Reinicio de tareas , documentación MinSOC , PPS 100 hs.
+  Preparación de Herramientas para prueba OOCD link.
+  \item 21/08/2013 : Pruebas OOCD Link en ORPSoC. 
+  \item 23/08/2013 : Más pruebas OOCD. Busque de documentación para el grabado
+  de la SPI S33 Intel de la placa S3ADSP1800A.
+  \item 24/08/2013 : Adaptación del proyecto de tesis a 3 casos posibles de
+  entrega y sus diferentes plazos.
+\end{enumerate}
+
+
+\section{Actividades a Realizar}
+\subsection{Descripción}
+\begin{enumerate}
+  \item Configuración de herramientas (toolchain) entorno linux.
+  \begin{enumerate}
+    \item Driver JTAG OOCD
+    \item Toolchain ORPSoC  
+  \end{enumerate}
+  \item Sistema Operativos
+  \begin{enumerate}
+  	\item Kernel para OR 
+    \item Test Linux orksim
+    \item Bootloader
+    \item Imagen SPI
+  \end{enumerate} 
+  \item Modulo Wishbone de prueba. Toogle de Led para prueba del módulo GPIO.
+  \item Documentación OpenRISC.
+  \item Documentación Modulo de Prueba.
+  \item Documentación Módulo Multiplador.
+  \item Documentación Puesta a Punto y prueba MinSoC.
+  \item Documentación Puesta a Punto y prueba ORPSoC.
+\end{enumerate}
+
+\end{document}
